@@ -6,9 +6,9 @@ _tabversion = '3.10'
 
 _lr_method = 'LALR'
 
-_lr_signature = 'nonassocLESSTHANGREATERTHANleftPLUSMINUSleftTIMESDIVIDErightUMINUSDIVIDE END_OF_SENTENCE EQUALS FALSE GREATERTHAN LESSTHAN LPAREN MINUS NAME NUMBER PLUS PRINT RPAREN STRING TIMES TRUEstatement : NAME EQUALS expression END_OF_SENTENCEstatement : PRINT LPAREN expression RPAREN END_OF_SENTENCEstatement : expression END_OF_SENTENCEexpression : expression PLUS expression\n                  | expression MINUS expression\n                  | expression TIMES expression\n                  | expression DIVIDE expression\n                  | expression LESSTHAN expression\n                  | expression GREATERTHAN expressionexpression : MINUS expression %prec UMINUSexpression : LPAREN expression RPARENexpression : NUMBER\n    \t\t\t  | TRUE\n    \t\t\t  | FALSE\n    \t\t\t  | STRINGexpression : NAME'
+_lr_signature = 'OBJETODIRECTO SUJETO VERBOPRESENTE\n    oracion : palabra \n            | palabra oracion\n    \n    palabra : SUJETO \n            | VERBOPRESENTE\n            | OBJETODIRECTO\n    \n    oracion : VERBOPRESENTE SUJETO OBJETODIRECTO\n            | SUJETO OBJETODIRECTO VERBOPRESENTE\n            | OBJETODIRECTO VERBOPRESENTE SUJETO\n            | OBJETODIRECTO SUJETO VERBOPRESENTE\n    \n    oracion : SUJETO VERBOPRESENTE OBJETODIRECTO\n    '
     
-_lr_action_items = {'NAME':([0,5,6,11,13,14,15,16,17,18,19,],[2,21,21,21,21,21,21,21,21,21,21,]),'PRINT':([0,],[4,]),'MINUS':([0,2,3,5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,],[6,-16,14,6,6,-12,-13,-14,-15,6,6,6,6,6,6,6,6,14,-16,-10,14,-4,-5,-6,-7,14,14,14,-11,]),'LPAREN':([0,4,5,6,11,13,14,15,16,17,18,19,],[5,19,5,5,5,5,5,5,5,5,5,5,]),'NUMBER':([0,5,6,11,13,14,15,16,17,18,19,],[7,7,7,7,7,7,7,7,7,7,7,]),'TRUE':([0,5,6,11,13,14,15,16,17,18,19,],[8,8,8,8,8,8,8,8,8,8,8,]),'FALSE':([0,5,6,11,13,14,15,16,17,18,19,],[9,9,9,9,9,9,9,9,9,9,9,]),'STRING':([0,5,6,11,13,14,15,16,17,18,19,],[10,10,10,10,10,10,10,10,10,10,10,]),'$end':([1,12,32,34,],[0,-3,-1,-2,]),'EQUALS':([2,],[11,]),'END_OF_SENTENCE':([2,3,7,8,9,10,21,22,23,24,25,26,27,28,29,31,33,],[-16,12,-12,-13,-14,-15,-16,-10,32,-4,-5,-6,-7,-8,-9,-11,34,]),'PLUS':([2,3,7,8,9,10,20,21,22,23,24,25,26,27,28,29,30,31,],[-16,13,-12,-13,-14,-15,13,-16,-10,13,-4,-5,-6,-7,13,13,13,-11,]),'TIMES':([2,3,7,8,9,10,20,21,22,23,24,25,26,27,28,29,30,31,],[-16,15,-12,-13,-14,-15,15,-16,-10,15,15,15,-6,-7,15,15,15,-11,]),'DIVIDE':([2,3,7,8,9,10,20,21,22,23,24,25,26,27,28,29,30,31,],[-16,16,-12,-13,-14,-15,16,-16,-10,16,16,16,-6,-7,16,16,16,-11,]),'LESSTHAN':([2,3,7,8,9,10,20,21,22,23,24,25,26,27,28,29,30,31,],[-16,17,-12,-13,-14,-15,17,-16,-10,17,-4,-5,-6,-7,None,None,17,-11,]),'GREATERTHAN':([2,3,7,8,9,10,20,21,22,23,24,25,26,27,28,29,30,31,],[-16,18,-12,-13,-14,-15,18,-16,-10,18,-4,-5,-6,-7,None,None,18,-11,]),'RPAREN':([7,8,9,10,20,21,22,24,25,26,27,28,29,30,31,],[-12,-13,-14,-15,31,-16,-10,-4,-5,-6,-7,-8,-9,33,-11,]),}
+_lr_action_items = {'VERBOPRESENTE':([0,2,3,4,5,8,11,],[3,3,-4,9,10,13,16,]),'SUJETO':([0,2,3,4,5,10,],[4,4,7,-3,11,15,]),'OBJETODIRECTO':([0,2,3,4,5,7,9,],[5,5,-4,8,-5,12,14,]),'$end':([1,2,3,4,5,6,12,13,14,15,16,],[0,-1,-4,-3,-5,-2,-6,-7,-10,-8,-9,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -17,7 +17,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'statement':([0,],[1,]),'expression':([0,5,6,11,13,14,15,16,17,18,19,],[3,20,22,23,24,25,26,27,28,29,30,]),}
+_lr_goto_items = {'oracion':([0,2,],[1,6,]),'palabra':([0,2,],[2,2,]),}
 
 _lr_goto = {}
 for _k, _v in _lr_goto_items.items():
@@ -26,21 +26,15 @@ for _k, _v in _lr_goto_items.items():
        _lr_goto[_x][_k] = _y
 del _lr_goto_items
 _lr_productions = [
-  ("S' -> statement","S'",1,None,None,None),
-  ('statement -> NAME EQUALS expression END_OF_SENTENCE','statement',4,'p_statement_assign','parser.py',17),
-  ('statement -> PRINT LPAREN expression RPAREN END_OF_SENTENCE','statement',5,'p_statement_print','parser.py',26),
-  ('statement -> expression END_OF_SENTENCE','statement',2,'p_statement_expr','parser.py',31),
-  ('expression -> expression PLUS expression','expression',3,'p_expression_binop','parser.py',34),
-  ('expression -> expression MINUS expression','expression',3,'p_expression_binop','parser.py',35),
-  ('expression -> expression TIMES expression','expression',3,'p_expression_binop','parser.py',36),
-  ('expression -> expression DIVIDE expression','expression',3,'p_expression_binop','parser.py',37),
-  ('expression -> expression LESSTHAN expression','expression',3,'p_expression_binop','parser.py',38),
-  ('expression -> expression GREATERTHAN expression','expression',3,'p_expression_binop','parser.py',39),
-  ('expression -> MINUS expression','expression',2,'p_expression_uminus','parser.py',48),
-  ('expression -> LPAREN expression RPAREN','expression',3,'p_expression_group','parser.py',52),
-  ('expression -> NUMBER','expression',1,'p_expression_number','parser.py',56),
-  ('expression -> TRUE','expression',1,'p_expression_number','parser.py',57),
-  ('expression -> FALSE','expression',1,'p_expression_number','parser.py',58),
-  ('expression -> STRING','expression',1,'p_expression_number','parser.py',59),
-  ('expression -> NAME','expression',1,'p_expression_name','parser.py',63),
+  ("S' -> oracion","S'",1,None,None,None),
+  ('oracion -> palabra','oracion',1,'p_oracion','parser.py',10),
+  ('oracion -> palabra oracion','oracion',2,'p_oracion','parser.py',11),
+  ('palabra -> SUJETO','palabra',1,'p_palabra','parser.py',17),
+  ('palabra -> VERBOPRESENTE','palabra',1,'p_palabra','parser.py',18),
+  ('palabra -> OBJETODIRECTO','palabra',1,'p_palabra','parser.py',19),
+  ('oracion -> VERBOPRESENTE SUJETO OBJETODIRECTO','oracion',3,'p_oracionin','parser.py',25),
+  ('oracion -> SUJETO OBJETODIRECTO VERBOPRESENTE','oracion',3,'p_oracionin','parser.py',26),
+  ('oracion -> OBJETODIRECTO VERBOPRESENTE SUJETO','oracion',3,'p_oracionin','parser.py',27),
+  ('oracion -> OBJETODIRECTO SUJETO VERBOPRESENTE','oracion',3,'p_oracionin','parser.py',28),
+  ('oracion -> SUJETO VERBOPRESENTE OBJETODIRECTO','oracion',3,'p_oracionc','parser.py',36),
 ]
