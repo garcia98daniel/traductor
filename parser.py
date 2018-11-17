@@ -1,6 +1,6 @@
 import ply.yacc as yacc
 import lexer
-import traductor
+import traductor 
 #-------------------------parser----------------------#
 tokens = lexer.tokens
 
@@ -23,6 +23,7 @@ def p_palabra(p):
 def p_oracionin(p):
     '''
     oracion : VERBOPRESENTE SUJETO OBJETODIRECTO
+            | VERBOPRESENTE OBJETODIRECTO SUJETO
             | SUJETO OBJETODIRECTO VERBOPRESENTE
             | OBJETODIRECTO VERBOPRESENTE SUJETO
             | OBJETODIRECTO SUJETO VERBOPRESENTE
@@ -36,11 +37,14 @@ def p_oracionc(p):
     oracion : SUJETO VERBOPRESENTE OBJETODIRECTO
     '''
     p[0] = "GRAMATICA CORRECTA"
-    #print("holaaaaaaaaaaaaaaaaaaaaaaaa")
-    #traducir(p.SUJETO,p.VERBOPRESENTE,p.OBJETODIRECTO)  
-
+    palabras_a_traducir = [];
+    palabras_a_traducir.append(p[1]);
+    palabras_a_traducir.append(p[2]);
+    palabras_a_traducir.append(p[3]);
+    traductor.traducir(palabras_a_traducir)  
 
 parser = yacc.yacc()
+
 
 
 while True:
@@ -48,5 +52,5 @@ while True:
     s = input('intro ----->')
   except EOFError:
     break
-  print(parser.parse(s))
+  print(parser.parse(s.lower()))
  

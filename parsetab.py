@@ -6,9 +6,9 @@ _tabversion = '3.10'
 
 _lr_method = 'LALR'
 
-_lr_signature = 'OBJETODIRECTO SUJETO VERBOPRESENTE\n    oracion : palabra \n            | palabra oracion\n    \n    palabra : SUJETO \n            | VERBOPRESENTE\n            | OBJETODIRECTO\n    \n    oracion : VERBOPRESENTE SUJETO OBJETODIRECTO\n            | SUJETO OBJETODIRECTO VERBOPRESENTE\n            | OBJETODIRECTO VERBOPRESENTE SUJETO\n            | OBJETODIRECTO SUJETO VERBOPRESENTE\n    \n    oracion : SUJETO VERBOPRESENTE OBJETODIRECTO\n    '
+_lr_signature = 'OBJETODIRECTO SUJETO VERBOPRESENTE\n    oracion : palabra \n            | palabra oracion\n    \n    palabra : SUJETO \n            | VERBOPRESENTE\n            | OBJETODIRECTO\n    \n    oracion : VERBOPRESENTE SUJETO OBJETODIRECTO\n            | VERBOPRESENTE OBJETODIRECTO SUJETO\n            | SUJETO OBJETODIRECTO VERBOPRESENTE\n            | OBJETODIRECTO VERBOPRESENTE SUJETO\n            | OBJETODIRECTO SUJETO VERBOPRESENTE\n    \n    oracion : SUJETO VERBOPRESENTE OBJETODIRECTO\n    '
     
-_lr_action_items = {'VERBOPRESENTE':([0,2,3,4,5,8,11,],[3,3,-4,9,10,13,16,]),'SUJETO':([0,2,3,4,5,10,],[4,4,7,-3,11,15,]),'OBJETODIRECTO':([0,2,3,4,5,7,9,],[5,5,-4,8,-5,12,14,]),'$end':([1,2,3,4,5,6,12,13,14,15,16,],[0,-1,-4,-3,-5,-2,-6,-7,-10,-8,-9,]),}
+_lr_action_items = {'VERBOPRESENTE':([0,2,3,4,5,9,12,],[3,3,-4,10,11,15,18,]),'SUJETO':([0,2,3,4,5,8,11,],[4,4,7,-3,12,14,17,]),'OBJETODIRECTO':([0,2,3,4,5,7,10,],[5,5,8,9,-5,13,16,]),'$end':([1,2,3,4,5,6,13,14,15,16,17,18,],[0,-1,-4,-3,-5,-2,-6,-7,-8,-11,-9,-10,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -33,8 +33,9 @@ _lr_productions = [
   ('palabra -> VERBOPRESENTE','palabra',1,'p_palabra','parser.py',18),
   ('palabra -> OBJETODIRECTO','palabra',1,'p_palabra','parser.py',19),
   ('oracion -> VERBOPRESENTE SUJETO OBJETODIRECTO','oracion',3,'p_oracionin','parser.py',25),
-  ('oracion -> SUJETO OBJETODIRECTO VERBOPRESENTE','oracion',3,'p_oracionin','parser.py',26),
-  ('oracion -> OBJETODIRECTO VERBOPRESENTE SUJETO','oracion',3,'p_oracionin','parser.py',27),
-  ('oracion -> OBJETODIRECTO SUJETO VERBOPRESENTE','oracion',3,'p_oracionin','parser.py',28),
-  ('oracion -> SUJETO VERBOPRESENTE OBJETODIRECTO','oracion',3,'p_oracionc','parser.py',36),
+  ('oracion -> VERBOPRESENTE OBJETODIRECTO SUJETO','oracion',3,'p_oracionin','parser.py',26),
+  ('oracion -> SUJETO OBJETODIRECTO VERBOPRESENTE','oracion',3,'p_oracionin','parser.py',27),
+  ('oracion -> OBJETODIRECTO VERBOPRESENTE SUJETO','oracion',3,'p_oracionin','parser.py',28),
+  ('oracion -> OBJETODIRECTO SUJETO VERBOPRESENTE','oracion',3,'p_oracionin','parser.py',29),
+  ('oracion -> SUJETO VERBOPRESENTE OBJETODIRECTO','oracion',3,'p_oracionc','parser.py',37),
 ]
