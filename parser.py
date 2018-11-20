@@ -58,6 +58,7 @@ def p_oracion2(p):
     '''
     oracion : SUJETO VERBOPP
             | SUJETO VERBOTP
+            | ARTICULOS SUSTANTIVOS
     '''
     p[0] = "GRAMATICA CORRECTA"
     palabras_a_traducir = [];
@@ -72,6 +73,7 @@ def p_oracion3(p):
     oracion : SUJETO VERBOPP ADJETIVO
             | SUJETO VERBOTP ADJETIVO
             | SUJETO VERBOTP SUSTANTIVOS
+            | ARTICULOS SUSTANTIVOS VERBOTP 
     '''
     p[0] = "GRAMATICA CORRECTA"
     palabras_a_traducir = [];
@@ -92,10 +94,12 @@ def p_oracion4(p):
             | SUJETO VERBOTP PREPOSICIONES SUSTANTIVOS
             | SUJETO VERBOPP ADVERBIOS SUSTANTIVOS
             | SUJETO VERBOTP ADVERBIOS SUSTANTIVOS
+            | SUJETO VERBOTP ADVERBIOS ADJETIVO
             | SUJETO VERBOPP PREPOSICIONES PRONOMBRES
             | SUJETO VERBOTP PREPOSICIONES PRONOMBRES
             | SUJETO VERBOPP ARTICULOS SUSTANTIVOS
             | SUJETO VERBOTP ARTICULOS SUSTANTIVOS
+            | ARTICULOS SUSTANTIVOS VERBOTP ADJETIVO
     '''
     p[0] = "GRAMATICA CORRECTA"
     palabras_a_traducir = [];

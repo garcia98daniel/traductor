@@ -15,7 +15,7 @@ t_SUSTANTIVOS = r'today|day|family|monday|tuesday|wednesday|thursday|friday|satu
 t_VERBOPP = r'am|are|study|cry|travel|pull|cook|dress|learn|listen|ask|call|run|eat|sleep|drink|watch|play|talk|use|jump|love|want|take'
 t_VERBOTP = r'is|studies|cries|travels|pulls|cooks|dresses|lerns|listens|asks|calls|runs|eats|sleeps|drinks|watches|plays|talks|uses|takes|jumps|loves|wants'
 
-t_ADJETIVO =  r'fast|good|bad|large|small|long|short|thick|narrow|deep|low|high|near|far|quick|slow|early|late|dark|clear|sunny|cloud|warm|cool|hot|wet'
+t_ADJETIVO =  r'fast|good|bad|large|small|long|short|thick|narrow|deep|low|high|near|fat|quick|slow|early|late|dark|clear|sunny|cloud|warm|cool|hot|wet'
 t_ADVERBIOS = r'very|today|yesterday|tomorrow|late|early|now|never|always|often|sometimes|here|there|everywhere|inside|outside|every' 
 
 t_PREPOSICIONES = r'and|about|after|at|behind|between|by|from|over|without|above|before|below|but|down|for|in|like|of|on|since|to|up|with'
