@@ -13,7 +13,7 @@ diccionarioENG={'i':1 , 'you':2, 'they':3, 'we':4, 'he':5, 'she':6, 'it': 7,
 diccionarioSPA={1:'yo' , 2:'tu' , 3:'ellos' , 4:'nosotros', 5:'el', 6:'ella', 7:'eso', 
                 101:'me' , 102:'tu' , 103:'el' , 104:'ella', 105:'nosotros', 106:'ellos', 
                 201:'hoy' , 202:'dia', 203:'familia' , 204:'lunes', 205:'martes', 206:'miercoles', 207:'jueves', 208:'viernes', 209:'sabado', 210:'domingo', 211:'cama', 212:'brazo', 213:'aeroplano', 214:'sangre', 215:'hueso', 216:'libro', 217:'pan', 218:'toro', 219:'bus', 220:'carro', 221:'gato', 222:'perro', 223:'muñeca', 224:'silla', 225:'pollo', 226:'moneda', 227:'cara', 228:'sombrero', 229:'mano', 230:'casa', 231:'niño', 232:'señorita', 233:'pierna', 234:'man', 235:'raton', 236:'anillo', 237:'sol', 238:'mesa', 239:'mujer', 240:'examen',
-                301:'soy/estoy' , 302:'eres/estas', 303:'cocinar' , 304:'correr', 305:'llorar', 306:'viajar', 307:'jalar', 308:'cocinar', 309:'vestir', 310:'aprender', 311:'escuchar', 312:'preguntar', 313:'llamar', 314:'correr', 315:'dormir',316:'dormir', 317:'beber', 318:'ver', 319:'jugar', 320:'hablar', 321:'usar', 322:'saltar', 323:'amar', 324:'querer', 325:'coger',
+                301:'soy/estoy' , 302:'eres/estas', 303:'cocinar' , 304:'correr', 305:'llorar', 306:'viajar', 307:'jalar', 308:'cocinar', 309:'vestir', 310:'aprender', 311:'escuchar', 312:'preguntar', 313:'llamar', 314:'correr', 315:'comer',316:'dormir', 317:'beber', 318:'ver', 319:'jugar', 320:'hablar', 321:'usar', 322:'saltar', 323:'amar', 324:'querer', 325:'coger',
                 401:'es/esta' , 402:'llora', 403:'cocina' , 404:'corre', 405:'jala', 406:'cocina', 407:'se viste', 408:'aprende', 409:'escucha', 410:'pregunta', 411:'llama', 412:'corre', 413:'come', 414:'duerme', 415:'bebe', 416:'ve', 417:'juega', 418:'habla', 419:'usa', 420:'salta', 421:'ama', 422:'quiere', 423:'toma',
                 501:'rapido' , 502:'bueno', 503:'malo' , 504:'largo', 505:'pequeño', 506:'largo', 507:'corto', 508:'grueso', 509:'estrecho', 510:'profundo', 511:'bajo', 512:'alto', 514:'cerca', 514:'gordo', 515:'veloz', 516:'lento', 517:'temprano', 518:'tarde', 519:'oscuro', 520:'limpio', 521:'soleado', 522:'nublado', 523:'tibio', 524:'frio', 525:'caliente', 526:'mojado', 
                 601:'muy' , 602:'hoy', 603:'ayer' , 604:'mañana', 605:'tarde', 606:'temprano', 607:'ahora', 608:'nunca', 609:'siempre', 610:'amenudo', 611:'aveces', 612:'aqui', 613:'alla', 614:'en todos lados', 615:'dentro', 616:'afuera', 617:'cada',                                                                                                                                                                
@@ -24,7 +24,11 @@ diccionarioSPA={1:'yo' , 2:'tu' , 3:'ellos' , 4:'nosotros', 5:'el', 6:'ella', 7:
 
 diccionarioYO={301:'soy/estoy' ,  303:'cocino' , 304:'corro', 305:'lloro', 306:'viajo', 307:'jalo', 308:'cocino', 309:'visto', 310:'aprendo', 311:'escucho', 312:'pregunto', 313:'llamo', 314:'corro', 315:'como',316:'duermo', 317:'bebo', 318:'veo', 319:'juego', 320:'hablo', 321:'uso', 322:'salto', 323:'amo', 324:'quiero', 325:'cojo'}
 diccionarioTU={302:'eres/estas' ,  303:'cocinas' , 304:'corres', 305:'lloras', 306:'viajas', 307:'jalas', 308:'cocinas', 309:'vistas', 310:'aprendes', 311:'escuchas', 312:'preguntas', 313:'llamas', 314:'corres', 315:'comes',316:'duermes', 317:'bebes', 318:'ves', 319:'juegas', 320:'hablas', 321:'usas', 322:'saltas', 323:'amas', 324:'quieres', 325:'coges'}
-listaVerbos=['am','are', 'cook', 'run', 'cry', 'travel', 'pull', 'cook', 'dress', 'learn', 'listen', 'ask', 'call', 'run', 'eat', 'sleep', 'drink', 'watch', 'play', 'talk', 'use', 'jump', 'love', 'want', 'take']
+diccionarioTERCERAP={401:'es/esta' , 402:'estudia', 403:'llora' , 404:'viaja', 405:'jala', 406:'cocina', 407:'viste', 408:'aprende', 409:'escucha', 410:'pregunta', 411:'llama', 412:'corre', 413:'come', 414:'duerme', 415:'bebe', 416:'ve', 417:'juega', 418:'habla', 419:'usa', 420:'salta', 421:'ama', 422:'quiere', 423:'toma'}
+diccionarioELLOS={301:'son/estan' ,  303:'cocinan' , 304:'corren', 305:'lloran', 306:'viajan', 307:'jalan', 308:'cocinan', 309:'vistan', 310:'aprenden', 311:'escuchan', 312:'preguntan', 313:'llaman', 314:'corren', 315:'comen',316:'duermen', 317:'beben', 318:'ven', 319:'juegan', 320:'hablan', 321:'usan', 322:'saltan', 323:'aman', 324:'quieren', 325:'cogen'}
+diccionarioNOSOTROS={301:'somos/estamos' ,  303:'cocinamos' , 304:'corremos', 305:'lloramos', 306:'viajamos', 307:'jalamos', 308:'cocinamos', 309:'vistamos', 310:'aprendemos', 311:'escuchamos', 312:'preguntamos', 313:'llamamos', 314:'corremos', 315:'comemos',316:'dormimos', 317:'bebemos', 318:'vemos', 319:'juegamos', 320:'hablamos', 321:'usamos', 322:'saltamos', 323:'amamos', 324:'quieremos', 325:'cogemos'}
+
+listaVerbos=['am','are', 'cook', 'run', 'cry', 'travel', 'pull', 'cook', 'dress', 'learn', 'listen', 'ask', 'call', 'run', 'eat', 'sleep', 'drink', 'watch', 'play', 'talk', 'use', 'jump', 'love', 'want', 'take', 'is', 'studies', 'cries', 'travels', 'pulls', 'cooks', 'dresses', 'learns', 'listens', 'asks', 'calls', 'runs', 'eats', 'sleeps', 'drinks', 'watches', 'plays', 'talks', 'uses', 'jumps','loves', 'wants', 'takes']
 
 def traducir(palabras_a_traducir):
 
@@ -32,50 +36,56 @@ def traducir(palabras_a_traducir):
     x=0
     while x < len(palabras_a_traducir):
       # print(x)
-      # print(palabras_a_traducir[x])  	 
-      cadenaTraducida+=" "+diccionarioSPA[diccionarioENG[palabras_a_traducir[x]]]
-      if(palabras_a_traducir[x]=='i'):
-        x+=1
-        if(es_verbo(x,palabras_a_traducir)):
-          sig=palabras_a_traducir[x]
-          cadenaTraducida+=" "+diccionarioYO[diccionarioENG[sig]]
-      elif(palabras_a_traducir[x]=='you'):
-        x+=1
-        if(es_verbo(x,palabras_a_traducir)):
-          sig=palabras_a_traducir[x]
-          cadenaTraducida+=" "+diccionarioTU[diccionarioENG[sig]]
-      # elif(palabras_a_traducir[x]=='he'):
-      #   x+=1
-      #   if(es_verbo(x,palabras_a_traducir)):
-      #     sig=palabras_a_traducir[x]
-      #     print(sig)
-      #     cadenaTraducida+=" "+diccionarioYO[diccionarioENG[sig]]
-      # elif(palabras_a_traducir[x]=='she'):
-      #   x+=1
-      #   if(es_verbo(x,palabras_a_traducir)):
-      #     sig=palabras_a_traducir[x]
-      #     print(sig)
-      #     cadenaTraducida+=" "+diccionarioYO[diccionarioENG[sig]]
-      # elif(palabras_a_traducir[x]=='it'):
-      #   x+=1
-      #   if(es_verbo(x,palabras_a_traducir)):
-      #     sig=palabras_a_traducir[x]
-      #     print(sig)
-      #     cadenaTraducida+=" "+diccionarioYO[diccionarioENG[sig]]
-      # elif(palabras_a_traducir[x]=='they'):
-      #   x+=1
-      #   if(es_verbo(x,palabras_a_traducir)):
-      #     sig=palabras_a_traducir[x]
-      #     print(sig)
-      #     cadenaTraducida+=" "+diccionarioYO[diccionarioENG[sig]]
-      # elif(palabras_a_traducir[x]=='we'):
-      #   x+=1
-      #   if(es_verbo(x,palabras_a_traducir)):
-      #     sig=palabras_a_traducir[x]
-      #     print(sig)
-      #     cadenaTraducida+=" "+diccionarioYO[diccionarioENG[sig]]
-      # else:
-      #     cadenaTraducida+=" "+diccionarioSPA[diccionarioENG[palabras_a_traducir[x]]]
+      # print(palabras_a_traducir[x])    
+      
+      if(len(palabras_a_traducir)==1 and (palabras_a_traducir[x]=="i" or palabras_a_traducir[x]=="you" or palabras_a_traducir[x]=="he" or palabras_a_traducir[x]=="she" or palabras_a_traducir[x]=="it" or palabras_a_traducir[x]=="we" or palabras_a_traducir[x]=="they")):
+          cadenaTraducida+=" "+diccionarioSPA[diccionarioENG[palabras_a_traducir[x]]]
+          break
+      else:
+        cadenaTraducida+=" "+diccionarioSPA[diccionarioENG[palabras_a_traducir[x]]]
+        if(palabras_a_traducir[x]=='i'):
+          
+          if(es_verbo(x+1,palabras_a_traducir)):
+            x+=1
+            sig=palabras_a_traducir[x]
+            cadenaTraducida+=" "+diccionarioYO[diccionarioENG[sig]]
+        elif(palabras_a_traducir[x]=='you'):
+          
+          if(es_verbo(x+1,palabras_a_traducir)):
+            x+=1
+            sig=palabras_a_traducir[x]
+            cadenaTraducida+=" "+diccionarioTU[diccionarioENG[sig]]
+        elif(palabras_a_traducir[x]=='he'):
+          
+          if(es_verbo(x+1,palabras_a_traducir)):
+            x+=1
+            sig=palabras_a_traducir[x]
+            cadenaTraducida+=" "+diccionarioTERCERAP[diccionarioENG[sig]]
+        elif(palabras_a_traducir[x]=='she'):
+          
+          if(es_verbo(x+1,palabras_a_traducir)):
+            x+=1
+            sig=palabras_a_traducir[x]
+            cadenaTraducida+=" "+diccionarioTERCERAP[diccionarioENG[sig]]
+        elif(palabras_a_traducir[x]=='it'):
+          
+          if(es_verbo(x+1,palabras_a_traducir)):
+            x+=1
+            sig=palabras_a_traducir[x]
+            cadenaTraducida+=" "+diccionarioTERCERAP[diccionarioENG[sig]]
+        elif(palabras_a_traducir[x]=='we'):
+          
+          if(es_verbo(x+1,palabras_a_traducir)):
+            x+=1
+            sig=palabras_a_traducir[x]
+            cadenaTraducida+=" "+diccionarioNOSOTROS[diccionarioENG[sig]]
+        elif(palabras_a_traducir[x]=='they'):
+          
+          if(es_verbo(x+1,palabras_a_traducir)):
+            x+=1
+            sig=palabras_a_traducir[x]
+            cadenaTraducida+=" "+diccionarioELLOS[diccionarioENG[sig]]
+        
 
       x=x+1;
     print(cadenaTraducida);
