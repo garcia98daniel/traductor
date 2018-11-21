@@ -7,18 +7,18 @@ tokens = [
     'ADVERBIOS','PREPOSICIONES','ARTICULOS',
     'DEMOSTRATIVOS', 'POSESIVOS'
     ]
-t_SUJETO = r'it|you|they|we|he|she|i'
+t_SUJETO = r'it|you|they|we|she|he|i'
 
-t_PRONOMBRES = r'me|him|her|us|them'
-t_SUSTANTIVOS = r'today|day|family|monday|tuesday|wednesday|thursday|friday|saturday|sunday|bed|arm|aircraft|blood|bone|book|bread|bull|bus|car|cat|dog|doll|chair|chicken|coin|face|gall|hat|hand|house|kid|lady|leg|man|mouse|ring|sun|table|woman|exam'
+t_PRONOMBRES = r'me|her|him|us|them'
+t_SUSTANTIVOS = r'today|day|family|monday|tuesday|wednesday|thursday|friday|saturday|sunday|bed|arm|aircraft|blood|bone|book|bread|bull|bus|car|cat|dog|doll|chair|chicken|coin|face|gall|hat|hand|house|kid|lady|leg|man|mouse|ring|sun|table|woman|exam|letter'
 
-t_VERBOPP = r'am|are|study|cry|travel|pull|cook|dress|learn|listen|ask|call|run|eat|sleep|drink|watch|play|talk|use|jump|love|want|take'
-t_VERBOTP = r'is|studies|cries|travels|pulls|cooks|dresses|lerns|listens|asks|calls|runs|eats|sleeps|drinks|watches|plays|talks|uses|takes|jumps|loves|wants'
+t_VERBOPP = r'am|are|write|danced|sing|have|wrote|was|were|dance|sang|had'
+t_VERBOTP = r'is|studies|cries|travels|pulls|cooks|dresses|lerns|listens|asks|calls|runs|eats|sleeps|drinks|watches|plays|talks|uses|takes|jumps|loves|wants|dances'
 
 t_ADJETIVO =  r'fast|good|bad|large|small|long|short|thick|narrow|deep|low|high|near|fat|quick|slow|early|late|dark|clear|sunny|cloud|warm|cool|hot|wet'
 t_ADVERBIOS = r'very|today|yesterday|tomorrow|late|early|now|never|always|often|sometimes|here|there|everywhere|inside|outside|every' 
 
-t_PREPOSICIONES = r'and|about|after|at|behind|between|by|from|over|without|above|before|below|but|down|for|in|like|of|on|since|to|up|with'
+t_PREPOSICIONES = r'and|about|after|at|behind|between|by|from|over|without|above|before|below|but|down|for|in|like|of|since|to|up|with'
 t_ARTICULOS = r'the|a|some|one|few'
 
 #t_DEMOSTRATIVOS = r'those|these|that|this'

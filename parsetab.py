@@ -6,9 +6,9 @@ _tabversion = '3.10'
 
 _lr_method = 'LALR'
 
-_lr_signature = 'ADJETIVO ADVERBIOS ARTICULOS DEMOSTRATIVOS POSESIVOS PREPOSICIONES PRONOMBRES SUJETO SUSTANTIVOS VERBOPP VERBOTP\n    oracion : VERBOPP SUJETO SUSTANTIVOS\n            | VERBOTP SUSTANTIVOS SUJETO\n            | SUJETO SUSTANTIVOS VERBOPP\n            | SUSTANTIVOS VERBOPP SUJETO\n            | SUSTANTIVOS SUJETO VERBOPP\n    \n    oracion : SUJETO\n            | PRONOMBRES\n            | SUSTANTIVOS\n            | VERBOPP\n            | VERBOTP\n            | ADJETIVO\n            | ADVERBIOS\n            | PREPOSICIONES\n            | ARTICULOS\n            | DEMOSTRATIVOS\n            | POSESIVOS\n    \n    oracion : SUJETO VERBOPP\n            | SUJETO VERBOTP\n            | ARTICULOS SUSTANTIVOS\n    \n    oracion : SUJETO VERBOPP ADJETIVO\n            | SUJETO VERBOTP ADJETIVO\n            | SUJETO VERBOTP SUSTANTIVOS\n            | ARTICULOS SUSTANTIVOS VERBOTP \n    \n    oracion : SUJETO VERBOPP SUSTANTIVOS SUSTANTIVOS\n            | SUJETO VERBOTP SUSTANTIVOS SUSTANTIVOS\n            | SUSTANTIVOS SUJETO VERBOPP SUSTANTIVOS\n            | SUSTANTIVOS SUJETO VERBOTP SUSTANTIVOS\n            | SUJETO VERBOPP PREPOSICIONES SUSTANTIVOS\n            | SUJETO VERBOTP PREPOSICIONES SUSTANTIVOS\n            | SUJETO VERBOPP ADVERBIOS SUSTANTIVOS\n            | SUJETO VERBOTP ADVERBIOS SUSTANTIVOS\n            | SUJETO VERBOTP ADVERBIOS ADJETIVO\n            | SUJETO VERBOPP PREPOSICIONES PRONOMBRES\n            | SUJETO VERBOTP PREPOSICIONES PRONOMBRES\n            | SUJETO VERBOPP ARTICULOS SUSTANTIVOS\n            | SUJETO VERBOTP ARTICULOS SUSTANTIVOS\n            | ARTICULOS SUSTANTIVOS VERBOTP ADJETIVO\n    '
+_lr_signature = 'ADJETIVO ADVERBIOS ARTICULOS DEMOSTRATIVOS POSESIVOS PREPOSICIONES PRONOMBRES SUJETO SUSTANTIVOS VERBOPP VERBOTP\n    oracion : VERBOPP SUJETO SUSTANTIVOS\n            | VERBOTP SUSTANTIVOS SUJETO\n            | SUJETO SUSTANTIVOS VERBOPP\n            | SUSTANTIVOS VERBOPP SUJETO\n            | SUSTANTIVOS SUJETO VERBOPP\n    \n      TEXTO : SUJETO\n            | PRONOMBRES\n            | SUSTANTIVOS\n            | VERBOPP\n            | VERBOTP\n            | ADJETIVO\n            | ADVERBIOS\n            | PREPOSICIONES\n            | ARTICULOS\n            | DEMOSTRATIVOS\n            | POSESIVOS\n    \n    oracion : SUJETO\n            | PRONOMBRES\n            | SUSTANTIVOS\n            | VERBOPP\n            | VERBOTP\n            | ADJETIVO\n            | ADVERBIOS\n            | PREPOSICIONES\n            | ARTICULOS\n            | DEMOSTRATIVOS\n            | POSESIVOS\n    \n    oracion : SUJETO VERBOPP\n            | SUJETO VERBOTP\n            | TEXTO TEXTO\n    \n    oracion : SUJETO VERBOTP TEXTO\n            | SUJETO VERBOPP TEXTO \n    \n    oracion : SUJETO VERBOPP TEXTO TEXTO\n            | SUJETO VERBOTP TEXTO TEXTO\n    \n    oracion : SUJETO VERBOPP TEXTO TEXTO TEXTO\n            | SUJETO VERBOTP TEXTO TEXTO TEXTO\n    \n    oracion : SUJETO VERBOPP TEXTO TEXTO TEXTO TEXTO\n            | SUJETO VERBOTP TEXTO TEXTO TEXTO TEXTO\n    '
     
-_lr_action_items = {'VERBOPP':([0,3,4,14,18,],[2,15,17,22,34,]),'VERBOTP':([0,3,18,20,],[5,16,35,37,]),'SUJETO':([0,2,4,17,19,],[3,13,18,33,36,]),'SUSTANTIVOS':([0,3,5,10,13,15,16,24,25,26,27,29,30,31,32,34,35,],[4,14,19,20,21,24,29,38,39,41,42,43,44,46,48,49,50,]),'PRONOMBRES':([0,25,30,],[6,40,45,]),'ADJETIVO':([0,15,16,31,37,],[7,23,28,47,51,]),'ADVERBIOS':([0,15,16,],[8,26,31,]),'PREPOSICIONES':([0,15,16,],[9,25,30,]),'ARTICULOS':([0,15,16,],[10,27,32,]),'DEMOSTRATIVOS':([0,],[11,]),'POSESIVOS':([0,],[12,]),'$end':([1,2,3,4,5,6,7,8,9,10,11,12,15,16,20,21,22,23,28,29,33,34,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,],[0,-9,-6,-8,-10,-7,-11,-12,-13,-14,-15,-16,-17,-18,-19,-1,-3,-20,-21,-22,-4,-5,-2,-23,-24,-28,-33,-30,-35,-25,-29,-34,-31,-32,-36,-26,-27,-37,]),}
+_lr_action_items = {'VERBOPP':([0,2,3,4,5,6,7,8,9,10,11,12,13,15,16,17,19,22,23,24,25,26,27,28,29,30,31,32,35,36,40,41,42,43,],[2,-9,16,18,-10,-7,-11,-12,-13,-14,-15,-16,25,34,25,25,38,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,25,25,25,25,25,25,]),'VERBOTP':([0,2,3,4,5,6,7,8,9,10,11,12,13,16,17,22,23,24,25,26,27,28,29,30,31,32,35,36,40,41,42,43,],[5,-9,17,-8,-10,-7,-11,-12,-13,-14,-15,-16,26,26,26,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,26,26,26,26,26,26,]),'SUJETO':([0,2,3,4,5,6,7,8,9,10,11,12,13,16,17,18,20,22,23,24,25,26,27,28,29,30,31,32,35,36,40,41,42,43,],[3,14,-6,19,-10,-7,-11,-12,-13,-14,-15,-16,22,22,22,37,39,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,22,22,22,22,22,22,]),'SUSTANTIVOS':([0,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,22,23,24,25,26,27,28,29,30,31,32,35,36,40,41,42,43,],[4,-9,15,-8,20,-7,-11,-12,-13,-14,-15,-16,24,33,24,24,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,24,24,24,24,24,24,]),'PRONOMBRES':([0,2,3,4,5,6,7,8,9,10,11,12,13,16,17,22,23,24,25,26,27,28,29,30,31,32,35,36,40,41,42,43,],[6,-9,-6,-8,-10,-7,-11,-12,-13,-14,-15,-16,23,23,23,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,23,23,23,23,23,23,]),'ADJETIVO':([0,2,3,4,5,6,7,8,9,10,11,12,13,16,17,22,23,24,25,26,27,28,29,30,31,32,35,36,40,41,42,43,],[7,-9,-6,-8,-10,-7,-11,-12,-13,-14,-15,-16,27,27,27,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,27,27,27,27,27,27,]),'ADVERBIOS':([0,2,3,4,5,6,7,8,9,10,11,12,13,16,17,22,23,24,25,26,27,28,29,30,31,32,35,36,40,41,42,43,],[8,-9,-6,-8,-10,-7,-11,-12,-13,-14,-15,-16,28,28,28,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,28,28,28,28,28,28,]),'PREPOSICIONES':([0,2,3,4,5,6,7,8,9,10,11,12,13,16,17,22,23,24,25,26,27,28,29,30,31,32,35,36,40,41,42,43,],[9,-9,-6,-8,-10,-7,-11,-12,-13,-14,-15,-16,29,29,29,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,29,29,29,29,29,29,]),'ARTICULOS':([0,2,3,4,5,6,7,8,9,10,11,12,13,16,17,22,23,24,25,26,27,28,29,30,31,32,35,36,40,41,42,43,],[10,-9,-6,-8,-10,-7,-11,-12,-13,-14,-15,-16,30,30,30,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,30,30,30,30,30,30,]),'DEMOSTRATIVOS':([0,2,3,4,5,6,7,8,9,10,11,12,13,16,17,22,23,24,25,26,27,28,29,30,31,32,35,36,40,41,42,43,],[11,-9,-6,-8,-10,-7,-11,-12,-13,-14,-15,-16,31,31,31,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,31,31,31,31,31,31,]),'POSESIVOS':([0,2,3,4,5,6,7,8,9,10,11,12,13,16,17,22,23,24,25,26,27,28,29,30,31,32,35,36,40,41,42,43,],[12,-9,-6,-8,-10,-7,-11,-12,-13,-14,-15,-16,32,32,32,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,32,32,32,32,32,32,]),'$end':([1,2,3,4,5,6,7,8,9,10,11,12,16,17,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,],[0,-20,-17,-19,-21,-18,-22,-23,-24,-25,-26,-27,-28,-29,-30,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,-1,-3,-32,-31,-4,-5,-2,-33,-34,-35,-36,-37,-38,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -17,7 +17,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'oracion':([0,],[1,]),}
+_lr_goto_items = {'oracion':([0,],[1,]),'TEXTO':([0,13,16,17,35,36,40,41,42,43,],[13,21,35,36,40,41,42,43,44,45,]),}
 
 _lr_goto = {}
 for _k, _v in _lr_goto_items.items():
@@ -32,36 +32,37 @@ _lr_productions = [
   ('oracion -> SUJETO SUSTANTIVOS VERBOPP','oracion',3,'p_oracionin','parser.py',29),
   ('oracion -> SUSTANTIVOS VERBOPP SUJETO','oracion',3,'p_oracionin','parser.py',30),
   ('oracion -> SUSTANTIVOS SUJETO VERBOPP','oracion',3,'p_oracionin','parser.py',31),
-  ('oracion -> SUJETO','oracion',1,'p_oracion1','parser.py',38),
-  ('oracion -> PRONOMBRES','oracion',1,'p_oracion1','parser.py',39),
-  ('oracion -> SUSTANTIVOS','oracion',1,'p_oracion1','parser.py',40),
-  ('oracion -> VERBOPP','oracion',1,'p_oracion1','parser.py',41),
-  ('oracion -> VERBOTP','oracion',1,'p_oracion1','parser.py',42),
-  ('oracion -> ADJETIVO','oracion',1,'p_oracion1','parser.py',43),
-  ('oracion -> ADVERBIOS','oracion',1,'p_oracion1','parser.py',44),
-  ('oracion -> PREPOSICIONES','oracion',1,'p_oracion1','parser.py',45),
-  ('oracion -> ARTICULOS','oracion',1,'p_oracion1','parser.py',46),
-  ('oracion -> DEMOSTRATIVOS','oracion',1,'p_oracion1','parser.py',47),
-  ('oracion -> POSESIVOS','oracion',1,'p_oracion1','parser.py',48),
-  ('oracion -> SUJETO VERBOPP','oracion',2,'p_oracion2','parser.py',59),
-  ('oracion -> SUJETO VERBOTP','oracion',2,'p_oracion2','parser.py',60),
-  ('oracion -> ARTICULOS SUSTANTIVOS','oracion',2,'p_oracion2','parser.py',61),
-  ('oracion -> SUJETO VERBOPP ADJETIVO','oracion',3,'p_oracion3','parser.py',73),
-  ('oracion -> SUJETO VERBOTP ADJETIVO','oracion',3,'p_oracion3','parser.py',74),
-  ('oracion -> SUJETO VERBOTP SUSTANTIVOS','oracion',3,'p_oracion3','parser.py',75),
-  ('oracion -> ARTICULOS SUSTANTIVOS VERBOTP','oracion',3,'p_oracion3','parser.py',76),
-  ('oracion -> SUJETO VERBOPP SUSTANTIVOS SUSTANTIVOS','oracion',4,'p_oracion4','parser.py',89),
-  ('oracion -> SUJETO VERBOTP SUSTANTIVOS SUSTANTIVOS','oracion',4,'p_oracion4','parser.py',90),
-  ('oracion -> SUSTANTIVOS SUJETO VERBOPP SUSTANTIVOS','oracion',4,'p_oracion4','parser.py',91),
-  ('oracion -> SUSTANTIVOS SUJETO VERBOTP SUSTANTIVOS','oracion',4,'p_oracion4','parser.py',92),
-  ('oracion -> SUJETO VERBOPP PREPOSICIONES SUSTANTIVOS','oracion',4,'p_oracion4','parser.py',93),
-  ('oracion -> SUJETO VERBOTP PREPOSICIONES SUSTANTIVOS','oracion',4,'p_oracion4','parser.py',94),
-  ('oracion -> SUJETO VERBOPP ADVERBIOS SUSTANTIVOS','oracion',4,'p_oracion4','parser.py',95),
-  ('oracion -> SUJETO VERBOTP ADVERBIOS SUSTANTIVOS','oracion',4,'p_oracion4','parser.py',96),
-  ('oracion -> SUJETO VERBOTP ADVERBIOS ADJETIVO','oracion',4,'p_oracion4','parser.py',97),
-  ('oracion -> SUJETO VERBOPP PREPOSICIONES PRONOMBRES','oracion',4,'p_oracion4','parser.py',98),
-  ('oracion -> SUJETO VERBOTP PREPOSICIONES PRONOMBRES','oracion',4,'p_oracion4','parser.py',99),
-  ('oracion -> SUJETO VERBOPP ARTICULOS SUSTANTIVOS','oracion',4,'p_oracion4','parser.py',100),
-  ('oracion -> SUJETO VERBOTP ARTICULOS SUSTANTIVOS','oracion',4,'p_oracion4','parser.py',101),
-  ('oracion -> ARTICULOS SUSTANTIVOS VERBOTP ADJETIVO','oracion',4,'p_oracion4','parser.py',102),
+  ('TEXTO -> SUJETO','TEXTO',1,'p_oracion0','parser.py',37),
+  ('TEXTO -> PRONOMBRES','TEXTO',1,'p_oracion0','parser.py',38),
+  ('TEXTO -> SUSTANTIVOS','TEXTO',1,'p_oracion0','parser.py',39),
+  ('TEXTO -> VERBOPP','TEXTO',1,'p_oracion0','parser.py',40),
+  ('TEXTO -> VERBOTP','TEXTO',1,'p_oracion0','parser.py',41),
+  ('TEXTO -> ADJETIVO','TEXTO',1,'p_oracion0','parser.py',42),
+  ('TEXTO -> ADVERBIOS','TEXTO',1,'p_oracion0','parser.py',43),
+  ('TEXTO -> PREPOSICIONES','TEXTO',1,'p_oracion0','parser.py',44),
+  ('TEXTO -> ARTICULOS','TEXTO',1,'p_oracion0','parser.py',45),
+  ('TEXTO -> DEMOSTRATIVOS','TEXTO',1,'p_oracion0','parser.py',46),
+  ('TEXTO -> POSESIVOS','TEXTO',1,'p_oracion0','parser.py',47),
+  ('oracion -> SUJETO','oracion',1,'p_oracion1','parser.py',54),
+  ('oracion -> PRONOMBRES','oracion',1,'p_oracion1','parser.py',55),
+  ('oracion -> SUSTANTIVOS','oracion',1,'p_oracion1','parser.py',56),
+  ('oracion -> VERBOPP','oracion',1,'p_oracion1','parser.py',57),
+  ('oracion -> VERBOTP','oracion',1,'p_oracion1','parser.py',58),
+  ('oracion -> ADJETIVO','oracion',1,'p_oracion1','parser.py',59),
+  ('oracion -> ADVERBIOS','oracion',1,'p_oracion1','parser.py',60),
+  ('oracion -> PREPOSICIONES','oracion',1,'p_oracion1','parser.py',61),
+  ('oracion -> ARTICULOS','oracion',1,'p_oracion1','parser.py',62),
+  ('oracion -> DEMOSTRATIVOS','oracion',1,'p_oracion1','parser.py',63),
+  ('oracion -> POSESIVOS','oracion',1,'p_oracion1','parser.py',64),
+  ('oracion -> SUJETO VERBOPP','oracion',2,'p_oracion2','parser.py',76),
+  ('oracion -> SUJETO VERBOTP','oracion',2,'p_oracion2','parser.py',77),
+  ('oracion -> TEXTO TEXTO','oracion',2,'p_oracion2','parser.py',78),
+  ('oracion -> SUJETO VERBOTP TEXTO','oracion',3,'p_oracion3','parser.py',92),
+  ('oracion -> SUJETO VERBOPP TEXTO','oracion',3,'p_oracion3','parser.py',93),
+  ('oracion -> SUJETO VERBOPP TEXTO TEXTO','oracion',4,'p_oracion4','parser.py',107),
+  ('oracion -> SUJETO VERBOTP TEXTO TEXTO','oracion',4,'p_oracion4','parser.py',108),
+  ('oracion -> SUJETO VERBOPP TEXTO TEXTO TEXTO','oracion',5,'p_oracion5','parser.py',121),
+  ('oracion -> SUJETO VERBOTP TEXTO TEXTO TEXTO','oracion',5,'p_oracion5','parser.py',122),
+  ('oracion -> SUJETO VERBOPP TEXTO TEXTO TEXTO TEXTO','oracion',6,'p_oracion6','parser.py',136),
+  ('oracion -> SUJETO VERBOTP TEXTO TEXTO TEXTO TEXTO','oracion',6,'p_oracion6','parser.py',137),
 ]
