@@ -7,48 +7,41 @@ Rule 1     oracion -> TEXTO
 Rule 2     TEXTO -> SUJETO
 Rule 3     TEXTO -> PRONOMBRES
 Rule 4     TEXTO -> SUSTANTIVOS
-Rule 5     TEXTO -> VERBOPP
-Rule 6     TEXTO -> VERBOTP
-Rule 7     TEXTO -> ADJETIVO
-Rule 8     TEXTO -> ADVERBIOS
-Rule 9     TEXTO -> PREPOSICIONES
-Rule 10    TEXTO -> ARTICULOS
-Rule 11    TEXTO -> DEMOSTRATIVOS
-Rule 12    TEXTO -> POSESIVOS
-Rule 13    oracion -> SUJETO VERBOPP
-Rule 14    oracion -> SUJETO VERBOTP
-Rule 15    oracion -> TEXTO TEXTO
-Rule 16    oracion -> SUJETO VERBOTP TEXTO
-Rule 17    oracion -> SUJETO VERBOPP TEXTO
-Rule 18    oracion -> TEXTO TEXTO TEXTO
-Rule 19    oracion -> SUJETO VERBOPP TEXTO TEXTO
-Rule 20    oracion -> SUJETO VERBOTP TEXTO TEXTO
-Rule 21    oracion -> TEXTO TEXTO TEXTO TEXTO
-Rule 22    oracion -> SUJETO VERBOPP TEXTO TEXTO TEXTO
-Rule 23    oracion -> SUJETO VERBOTP TEXTO TEXTO TEXTO
-Rule 24    oracion -> TEXTO TEXTO TEXTO TEXTO TEXTO
-Rule 25    oracion -> SUJETO VERBOPP TEXTO TEXTO TEXTO TEXTO
-Rule 26    oracion -> SUJETO VERBOTP TEXTO TEXTO TEXTO TEXTO
-Rule 27    oracion -> TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO
+Rule 5     TEXTO -> VERBOS
+Rule 6     TEXTO -> ADJETIVO
+Rule 7     TEXTO -> ADVERBIOS
+Rule 8     TEXTO -> PREPOSICIONES
+Rule 9     TEXTO -> ARTICULOS
+Rule 10    TEXTO -> DEMOSTRATIVOS
+Rule 11    TEXTO -> POSESIVOS
+Rule 12    oracion -> SUJETO VERBOS
+Rule 13    oracion -> TEXTO TEXTO
+Rule 14    oracion -> SUJETO VERBOS TEXTO
+Rule 15    oracion -> TEXTO TEXTO TEXTO
+Rule 16    oracion -> SUJETO VERBOS TEXTO TEXTO
+Rule 17    oracion -> TEXTO TEXTO TEXTO TEXTO
+Rule 18    oracion -> SUJETO VERBOS TEXTO TEXTO TEXTO
+Rule 19    oracion -> TEXTO TEXTO TEXTO TEXTO TEXTO
+Rule 20    oracion -> SUJETO VERBOS TEXTO TEXTO TEXTO TEXTO
+Rule 21    oracion -> TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO
 
 Terminals, with rules where they appear
 
-ADJETIVO             : 7
-ADVERBIOS            : 8
-ARTICULOS            : 10
-DEMOSTRATIVOS        : 11
-POSESIVOS            : 12
-PREPOSICIONES        : 9
+ADJETIVO             : 6
+ADVERBIOS            : 7
+ARTICULOS            : 9
+DEMOSTRATIVOS        : 10
+POSESIVOS            : 11
+PREPOSICIONES        : 8
 PRONOMBRES           : 3
-SUJETO               : 2 13 14 16 17 19 20 22 23 25 26
+SUJETO               : 2 12 14 16 18 20
 SUSTANTIVOS          : 4
-VERBOPP              : 5 13 17 19 22 25
-VERBOTP              : 6 14 16 20 23 26
+VERBOS               : 5 12 14 16 18 20
 error                : 
 
 Nonterminals, with rules where they appear
 
-TEXTO                : 1 15 15 16 17 18 18 18 19 19 20 20 21 21 21 21 22 22 22 23 23 23 24 24 24 24 24 25 25 25 25 26 26 26 26 27 27 27 27 27 27
+TEXTO                : 1 13 13 14 15 15 15 16 16 17 17 17 17 18 18 18 19 19 19 19 19 20 20 20 20 21 21 21 21 21 21
 oracion              : 0
 
 Parsing method: LALR
@@ -57,44 +50,37 @@ state 0
 
     (0) S' -> . oracion
     (1) oracion -> . TEXTO
-    (13) oracion -> . SUJETO VERBOPP
-    (14) oracion -> . SUJETO VERBOTP
-    (15) oracion -> . TEXTO TEXTO
-    (16) oracion -> . SUJETO VERBOTP TEXTO
-    (17) oracion -> . SUJETO VERBOPP TEXTO
-    (18) oracion -> . TEXTO TEXTO TEXTO
-    (19) oracion -> . SUJETO VERBOPP TEXTO TEXTO
-    (20) oracion -> . SUJETO VERBOTP TEXTO TEXTO
-    (21) oracion -> . TEXTO TEXTO TEXTO TEXTO
-    (22) oracion -> . SUJETO VERBOPP TEXTO TEXTO TEXTO
-    (23) oracion -> . SUJETO VERBOTP TEXTO TEXTO TEXTO
-    (24) oracion -> . TEXTO TEXTO TEXTO TEXTO TEXTO
-    (25) oracion -> . SUJETO VERBOPP TEXTO TEXTO TEXTO TEXTO
-    (26) oracion -> . SUJETO VERBOTP TEXTO TEXTO TEXTO TEXTO
-    (27) oracion -> . TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO
+    (12) oracion -> . SUJETO VERBOS
+    (13) oracion -> . TEXTO TEXTO
+    (14) oracion -> . SUJETO VERBOS TEXTO
+    (15) oracion -> . TEXTO TEXTO TEXTO
+    (16) oracion -> . SUJETO VERBOS TEXTO TEXTO
+    (17) oracion -> . TEXTO TEXTO TEXTO TEXTO
+    (18) oracion -> . SUJETO VERBOS TEXTO TEXTO TEXTO
+    (19) oracion -> . TEXTO TEXTO TEXTO TEXTO TEXTO
+    (20) oracion -> . SUJETO VERBOS TEXTO TEXTO TEXTO TEXTO
+    (21) oracion -> . TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO
     (2) TEXTO -> . SUJETO
     (3) TEXTO -> . PRONOMBRES
     (4) TEXTO -> . SUSTANTIVOS
-    (5) TEXTO -> . VERBOPP
-    (6) TEXTO -> . VERBOTP
-    (7) TEXTO -> . ADJETIVO
-    (8) TEXTO -> . ADVERBIOS
-    (9) TEXTO -> . PREPOSICIONES
-    (10) TEXTO -> . ARTICULOS
-    (11) TEXTO -> . DEMOSTRATIVOS
-    (12) TEXTO -> . POSESIVOS
+    (5) TEXTO -> . VERBOS
+    (6) TEXTO -> . ADJETIVO
+    (7) TEXTO -> . ADVERBIOS
+    (8) TEXTO -> . PREPOSICIONES
+    (9) TEXTO -> . ARTICULOS
+    (10) TEXTO -> . DEMOSTRATIVOS
+    (11) TEXTO -> . POSESIVOS
 
     SUJETO          shift and go to state 3
-    PRONOMBRES      shift and go to state 6
-    SUSTANTIVOS     shift and go to state 7
-    VERBOPP         shift and go to state 4
-    VERBOTP         shift and go to state 5
-    ADJETIVO        shift and go to state 8
-    ADVERBIOS       shift and go to state 9
-    PREPOSICIONES   shift and go to state 10
-    ARTICULOS       shift and go to state 11
-    DEMOSTRATIVOS   shift and go to state 12
-    POSESIVOS       shift and go to state 13
+    PRONOMBRES      shift and go to state 5
+    SUSTANTIVOS     shift and go to state 6
+    VERBOS          shift and go to state 4
+    ADJETIVO        shift and go to state 7
+    ADVERBIOS       shift and go to state 8
+    PREPOSICIONES   shift and go to state 9
+    ARTICULOS       shift and go to state 10
+    DEMOSTRATIVOS   shift and go to state 11
+    POSESIVOS       shift and go to state 12
 
     oracion                        shift and go to state 1
     TEXTO                          shift and go to state 2
@@ -108,56 +94,47 @@ state 1
 state 2
 
     (1) oracion -> TEXTO .
-    (15) oracion -> TEXTO . TEXTO
-    (18) oracion -> TEXTO . TEXTO TEXTO
-    (21) oracion -> TEXTO . TEXTO TEXTO TEXTO
-    (24) oracion -> TEXTO . TEXTO TEXTO TEXTO TEXTO
-    (27) oracion -> TEXTO . TEXTO TEXTO TEXTO TEXTO TEXTO
+    (13) oracion -> TEXTO . TEXTO
+    (15) oracion -> TEXTO . TEXTO TEXTO
+    (17) oracion -> TEXTO . TEXTO TEXTO TEXTO
+    (19) oracion -> TEXTO . TEXTO TEXTO TEXTO TEXTO
+    (21) oracion -> TEXTO . TEXTO TEXTO TEXTO TEXTO TEXTO
     (2) TEXTO -> . SUJETO
     (3) TEXTO -> . PRONOMBRES
     (4) TEXTO -> . SUSTANTIVOS
-    (5) TEXTO -> . VERBOPP
-    (6) TEXTO -> . VERBOTP
-    (7) TEXTO -> . ADJETIVO
-    (8) TEXTO -> . ADVERBIOS
-    (9) TEXTO -> . PREPOSICIONES
-    (10) TEXTO -> . ARTICULOS
-    (11) TEXTO -> . DEMOSTRATIVOS
-    (12) TEXTO -> . POSESIVOS
+    (5) TEXTO -> . VERBOS
+    (6) TEXTO -> . ADJETIVO
+    (7) TEXTO -> . ADVERBIOS
+    (8) TEXTO -> . PREPOSICIONES
+    (9) TEXTO -> . ARTICULOS
+    (10) TEXTO -> . DEMOSTRATIVOS
+    (11) TEXTO -> . POSESIVOS
 
     $end            reduce using rule 1 (oracion -> TEXTO .)
-    SUJETO          shift and go to state 15
-    PRONOMBRES      shift and go to state 6
-    SUSTANTIVOS     shift and go to state 7
-    VERBOPP         shift and go to state 4
-    VERBOTP         shift and go to state 5
-    ADJETIVO        shift and go to state 8
-    ADVERBIOS       shift and go to state 9
-    PREPOSICIONES   shift and go to state 10
-    ARTICULOS       shift and go to state 11
-    DEMOSTRATIVOS   shift and go to state 12
-    POSESIVOS       shift and go to state 13
+    SUJETO          shift and go to state 14
+    PRONOMBRES      shift and go to state 5
+    SUSTANTIVOS     shift and go to state 6
+    VERBOS          shift and go to state 4
+    ADJETIVO        shift and go to state 7
+    ADVERBIOS       shift and go to state 8
+    PREPOSICIONES   shift and go to state 9
+    ARTICULOS       shift and go to state 10
+    DEMOSTRATIVOS   shift and go to state 11
+    POSESIVOS       shift and go to state 12
 
-    TEXTO                          shift and go to state 14
+    TEXTO                          shift and go to state 13
 
 state 3
 
-    (13) oracion -> SUJETO . VERBOPP
-    (14) oracion -> SUJETO . VERBOTP
-    (16) oracion -> SUJETO . VERBOTP TEXTO
-    (17) oracion -> SUJETO . VERBOPP TEXTO
-    (19) oracion -> SUJETO . VERBOPP TEXTO TEXTO
-    (20) oracion -> SUJETO . VERBOTP TEXTO TEXTO
-    (22) oracion -> SUJETO . VERBOPP TEXTO TEXTO TEXTO
-    (23) oracion -> SUJETO . VERBOTP TEXTO TEXTO TEXTO
-    (25) oracion -> SUJETO . VERBOPP TEXTO TEXTO TEXTO TEXTO
-    (26) oracion -> SUJETO . VERBOTP TEXTO TEXTO TEXTO TEXTO
+    (12) oracion -> SUJETO . VERBOS
+    (14) oracion -> SUJETO . VERBOS TEXTO
+    (16) oracion -> SUJETO . VERBOS TEXTO TEXTO
+    (18) oracion -> SUJETO . VERBOS TEXTO TEXTO TEXTO
+    (20) oracion -> SUJETO . VERBOS TEXTO TEXTO TEXTO TEXTO
     (2) TEXTO -> SUJETO .
 
-  ! shift/reduce conflict for VERBOPP resolved as shift
-  ! shift/reduce conflict for VERBOTP resolved as shift
-    VERBOPP         shift and go to state 16
-    VERBOTP         shift and go to state 17
+  ! shift/reduce conflict for VERBOS resolved as shift
+    VERBOS          shift and go to state 15
     SUJETO          reduce using rule 2 (TEXTO -> SUJETO .)
     PRONOMBRES      reduce using rule 2 (TEXTO -> SUJETO .)
     SUSTANTIVOS     reduce using rule 2 (TEXTO -> SUJETO .)
@@ -169,55 +146,34 @@ state 3
     POSESIVOS       reduce using rule 2 (TEXTO -> SUJETO .)
     $end            reduce using rule 2 (TEXTO -> SUJETO .)
 
-  ! VERBOPP         [ reduce using rule 2 (TEXTO -> SUJETO .) ]
-  ! VERBOTP         [ reduce using rule 2 (TEXTO -> SUJETO .) ]
+  ! VERBOS          [ reduce using rule 2 (TEXTO -> SUJETO .) ]
 
 
 state 4
 
-    (5) TEXTO -> VERBOPP .
+    (5) TEXTO -> VERBOS .
 
-    SUJETO          reduce using rule 5 (TEXTO -> VERBOPP .)
-    PRONOMBRES      reduce using rule 5 (TEXTO -> VERBOPP .)
-    SUSTANTIVOS     reduce using rule 5 (TEXTO -> VERBOPP .)
-    VERBOPP         reduce using rule 5 (TEXTO -> VERBOPP .)
-    VERBOTP         reduce using rule 5 (TEXTO -> VERBOPP .)
-    ADJETIVO        reduce using rule 5 (TEXTO -> VERBOPP .)
-    ADVERBIOS       reduce using rule 5 (TEXTO -> VERBOPP .)
-    PREPOSICIONES   reduce using rule 5 (TEXTO -> VERBOPP .)
-    ARTICULOS       reduce using rule 5 (TEXTO -> VERBOPP .)
-    DEMOSTRATIVOS   reduce using rule 5 (TEXTO -> VERBOPP .)
-    POSESIVOS       reduce using rule 5 (TEXTO -> VERBOPP .)
-    $end            reduce using rule 5 (TEXTO -> VERBOPP .)
+    SUJETO          reduce using rule 5 (TEXTO -> VERBOS .)
+    PRONOMBRES      reduce using rule 5 (TEXTO -> VERBOS .)
+    SUSTANTIVOS     reduce using rule 5 (TEXTO -> VERBOS .)
+    VERBOS          reduce using rule 5 (TEXTO -> VERBOS .)
+    ADJETIVO        reduce using rule 5 (TEXTO -> VERBOS .)
+    ADVERBIOS       reduce using rule 5 (TEXTO -> VERBOS .)
+    PREPOSICIONES   reduce using rule 5 (TEXTO -> VERBOS .)
+    ARTICULOS       reduce using rule 5 (TEXTO -> VERBOS .)
+    DEMOSTRATIVOS   reduce using rule 5 (TEXTO -> VERBOS .)
+    POSESIVOS       reduce using rule 5 (TEXTO -> VERBOS .)
+    $end            reduce using rule 5 (TEXTO -> VERBOS .)
 
 
 state 5
-
-    (6) TEXTO -> VERBOTP .
-
-    SUJETO          reduce using rule 6 (TEXTO -> VERBOTP .)
-    PRONOMBRES      reduce using rule 6 (TEXTO -> VERBOTP .)
-    SUSTANTIVOS     reduce using rule 6 (TEXTO -> VERBOTP .)
-    VERBOPP         reduce using rule 6 (TEXTO -> VERBOTP .)
-    VERBOTP         reduce using rule 6 (TEXTO -> VERBOTP .)
-    ADJETIVO        reduce using rule 6 (TEXTO -> VERBOTP .)
-    ADVERBIOS       reduce using rule 6 (TEXTO -> VERBOTP .)
-    PREPOSICIONES   reduce using rule 6 (TEXTO -> VERBOTP .)
-    ARTICULOS       reduce using rule 6 (TEXTO -> VERBOTP .)
-    DEMOSTRATIVOS   reduce using rule 6 (TEXTO -> VERBOTP .)
-    POSESIVOS       reduce using rule 6 (TEXTO -> VERBOTP .)
-    $end            reduce using rule 6 (TEXTO -> VERBOTP .)
-
-
-state 6
 
     (3) TEXTO -> PRONOMBRES .
 
     SUJETO          reduce using rule 3 (TEXTO -> PRONOMBRES .)
     PRONOMBRES      reduce using rule 3 (TEXTO -> PRONOMBRES .)
     SUSTANTIVOS     reduce using rule 3 (TEXTO -> PRONOMBRES .)
-    VERBOPP         reduce using rule 3 (TEXTO -> PRONOMBRES .)
-    VERBOTP         reduce using rule 3 (TEXTO -> PRONOMBRES .)
+    VERBOS          reduce using rule 3 (TEXTO -> PRONOMBRES .)
     ADJETIVO        reduce using rule 3 (TEXTO -> PRONOMBRES .)
     ADVERBIOS       reduce using rule 3 (TEXTO -> PRONOMBRES .)
     PREPOSICIONES   reduce using rule 3 (TEXTO -> PRONOMBRES .)
@@ -227,15 +183,14 @@ state 6
     $end            reduce using rule 3 (TEXTO -> PRONOMBRES .)
 
 
-state 7
+state 6
 
     (4) TEXTO -> SUSTANTIVOS .
 
     SUJETO          reduce using rule 4 (TEXTO -> SUSTANTIVOS .)
     PRONOMBRES      reduce using rule 4 (TEXTO -> SUSTANTIVOS .)
     SUSTANTIVOS     reduce using rule 4 (TEXTO -> SUSTANTIVOS .)
-    VERBOPP         reduce using rule 4 (TEXTO -> SUSTANTIVOS .)
-    VERBOTP         reduce using rule 4 (TEXTO -> SUSTANTIVOS .)
+    VERBOS          reduce using rule 4 (TEXTO -> SUSTANTIVOS .)
     ADJETIVO        reduce using rule 4 (TEXTO -> SUSTANTIVOS .)
     ADVERBIOS       reduce using rule 4 (TEXTO -> SUSTANTIVOS .)
     PREPOSICIONES   reduce using rule 4 (TEXTO -> SUSTANTIVOS .)
@@ -245,157 +200,148 @@ state 7
     $end            reduce using rule 4 (TEXTO -> SUSTANTIVOS .)
 
 
+state 7
+
+    (6) TEXTO -> ADJETIVO .
+
+    SUJETO          reduce using rule 6 (TEXTO -> ADJETIVO .)
+    PRONOMBRES      reduce using rule 6 (TEXTO -> ADJETIVO .)
+    SUSTANTIVOS     reduce using rule 6 (TEXTO -> ADJETIVO .)
+    VERBOS          reduce using rule 6 (TEXTO -> ADJETIVO .)
+    ADJETIVO        reduce using rule 6 (TEXTO -> ADJETIVO .)
+    ADVERBIOS       reduce using rule 6 (TEXTO -> ADJETIVO .)
+    PREPOSICIONES   reduce using rule 6 (TEXTO -> ADJETIVO .)
+    ARTICULOS       reduce using rule 6 (TEXTO -> ADJETIVO .)
+    DEMOSTRATIVOS   reduce using rule 6 (TEXTO -> ADJETIVO .)
+    POSESIVOS       reduce using rule 6 (TEXTO -> ADJETIVO .)
+    $end            reduce using rule 6 (TEXTO -> ADJETIVO .)
+
+
 state 8
 
-    (7) TEXTO -> ADJETIVO .
+    (7) TEXTO -> ADVERBIOS .
 
-    SUJETO          reduce using rule 7 (TEXTO -> ADJETIVO .)
-    PRONOMBRES      reduce using rule 7 (TEXTO -> ADJETIVO .)
-    SUSTANTIVOS     reduce using rule 7 (TEXTO -> ADJETIVO .)
-    VERBOPP         reduce using rule 7 (TEXTO -> ADJETIVO .)
-    VERBOTP         reduce using rule 7 (TEXTO -> ADJETIVO .)
-    ADJETIVO        reduce using rule 7 (TEXTO -> ADJETIVO .)
-    ADVERBIOS       reduce using rule 7 (TEXTO -> ADJETIVO .)
-    PREPOSICIONES   reduce using rule 7 (TEXTO -> ADJETIVO .)
-    ARTICULOS       reduce using rule 7 (TEXTO -> ADJETIVO .)
-    DEMOSTRATIVOS   reduce using rule 7 (TEXTO -> ADJETIVO .)
-    POSESIVOS       reduce using rule 7 (TEXTO -> ADJETIVO .)
-    $end            reduce using rule 7 (TEXTO -> ADJETIVO .)
+    SUJETO          reduce using rule 7 (TEXTO -> ADVERBIOS .)
+    PRONOMBRES      reduce using rule 7 (TEXTO -> ADVERBIOS .)
+    SUSTANTIVOS     reduce using rule 7 (TEXTO -> ADVERBIOS .)
+    VERBOS          reduce using rule 7 (TEXTO -> ADVERBIOS .)
+    ADJETIVO        reduce using rule 7 (TEXTO -> ADVERBIOS .)
+    ADVERBIOS       reduce using rule 7 (TEXTO -> ADVERBIOS .)
+    PREPOSICIONES   reduce using rule 7 (TEXTO -> ADVERBIOS .)
+    ARTICULOS       reduce using rule 7 (TEXTO -> ADVERBIOS .)
+    DEMOSTRATIVOS   reduce using rule 7 (TEXTO -> ADVERBIOS .)
+    POSESIVOS       reduce using rule 7 (TEXTO -> ADVERBIOS .)
+    $end            reduce using rule 7 (TEXTO -> ADVERBIOS .)
 
 
 state 9
 
-    (8) TEXTO -> ADVERBIOS .
+    (8) TEXTO -> PREPOSICIONES .
 
-    SUJETO          reduce using rule 8 (TEXTO -> ADVERBIOS .)
-    PRONOMBRES      reduce using rule 8 (TEXTO -> ADVERBIOS .)
-    SUSTANTIVOS     reduce using rule 8 (TEXTO -> ADVERBIOS .)
-    VERBOPP         reduce using rule 8 (TEXTO -> ADVERBIOS .)
-    VERBOTP         reduce using rule 8 (TEXTO -> ADVERBIOS .)
-    ADJETIVO        reduce using rule 8 (TEXTO -> ADVERBIOS .)
-    ADVERBIOS       reduce using rule 8 (TEXTO -> ADVERBIOS .)
-    PREPOSICIONES   reduce using rule 8 (TEXTO -> ADVERBIOS .)
-    ARTICULOS       reduce using rule 8 (TEXTO -> ADVERBIOS .)
-    DEMOSTRATIVOS   reduce using rule 8 (TEXTO -> ADVERBIOS .)
-    POSESIVOS       reduce using rule 8 (TEXTO -> ADVERBIOS .)
-    $end            reduce using rule 8 (TEXTO -> ADVERBIOS .)
+    SUJETO          reduce using rule 8 (TEXTO -> PREPOSICIONES .)
+    PRONOMBRES      reduce using rule 8 (TEXTO -> PREPOSICIONES .)
+    SUSTANTIVOS     reduce using rule 8 (TEXTO -> PREPOSICIONES .)
+    VERBOS          reduce using rule 8 (TEXTO -> PREPOSICIONES .)
+    ADJETIVO        reduce using rule 8 (TEXTO -> PREPOSICIONES .)
+    ADVERBIOS       reduce using rule 8 (TEXTO -> PREPOSICIONES .)
+    PREPOSICIONES   reduce using rule 8 (TEXTO -> PREPOSICIONES .)
+    ARTICULOS       reduce using rule 8 (TEXTO -> PREPOSICIONES .)
+    DEMOSTRATIVOS   reduce using rule 8 (TEXTO -> PREPOSICIONES .)
+    POSESIVOS       reduce using rule 8 (TEXTO -> PREPOSICIONES .)
+    $end            reduce using rule 8 (TEXTO -> PREPOSICIONES .)
 
 
 state 10
 
-    (9) TEXTO -> PREPOSICIONES .
+    (9) TEXTO -> ARTICULOS .
 
-    SUJETO          reduce using rule 9 (TEXTO -> PREPOSICIONES .)
-    PRONOMBRES      reduce using rule 9 (TEXTO -> PREPOSICIONES .)
-    SUSTANTIVOS     reduce using rule 9 (TEXTO -> PREPOSICIONES .)
-    VERBOPP         reduce using rule 9 (TEXTO -> PREPOSICIONES .)
-    VERBOTP         reduce using rule 9 (TEXTO -> PREPOSICIONES .)
-    ADJETIVO        reduce using rule 9 (TEXTO -> PREPOSICIONES .)
-    ADVERBIOS       reduce using rule 9 (TEXTO -> PREPOSICIONES .)
-    PREPOSICIONES   reduce using rule 9 (TEXTO -> PREPOSICIONES .)
-    ARTICULOS       reduce using rule 9 (TEXTO -> PREPOSICIONES .)
-    DEMOSTRATIVOS   reduce using rule 9 (TEXTO -> PREPOSICIONES .)
-    POSESIVOS       reduce using rule 9 (TEXTO -> PREPOSICIONES .)
-    $end            reduce using rule 9 (TEXTO -> PREPOSICIONES .)
+    SUJETO          reduce using rule 9 (TEXTO -> ARTICULOS .)
+    PRONOMBRES      reduce using rule 9 (TEXTO -> ARTICULOS .)
+    SUSTANTIVOS     reduce using rule 9 (TEXTO -> ARTICULOS .)
+    VERBOS          reduce using rule 9 (TEXTO -> ARTICULOS .)
+    ADJETIVO        reduce using rule 9 (TEXTO -> ARTICULOS .)
+    ADVERBIOS       reduce using rule 9 (TEXTO -> ARTICULOS .)
+    PREPOSICIONES   reduce using rule 9 (TEXTO -> ARTICULOS .)
+    ARTICULOS       reduce using rule 9 (TEXTO -> ARTICULOS .)
+    DEMOSTRATIVOS   reduce using rule 9 (TEXTO -> ARTICULOS .)
+    POSESIVOS       reduce using rule 9 (TEXTO -> ARTICULOS .)
+    $end            reduce using rule 9 (TEXTO -> ARTICULOS .)
 
 
 state 11
 
-    (10) TEXTO -> ARTICULOS .
+    (10) TEXTO -> DEMOSTRATIVOS .
 
-    SUJETO          reduce using rule 10 (TEXTO -> ARTICULOS .)
-    PRONOMBRES      reduce using rule 10 (TEXTO -> ARTICULOS .)
-    SUSTANTIVOS     reduce using rule 10 (TEXTO -> ARTICULOS .)
-    VERBOPP         reduce using rule 10 (TEXTO -> ARTICULOS .)
-    VERBOTP         reduce using rule 10 (TEXTO -> ARTICULOS .)
-    ADJETIVO        reduce using rule 10 (TEXTO -> ARTICULOS .)
-    ADVERBIOS       reduce using rule 10 (TEXTO -> ARTICULOS .)
-    PREPOSICIONES   reduce using rule 10 (TEXTO -> ARTICULOS .)
-    ARTICULOS       reduce using rule 10 (TEXTO -> ARTICULOS .)
-    DEMOSTRATIVOS   reduce using rule 10 (TEXTO -> ARTICULOS .)
-    POSESIVOS       reduce using rule 10 (TEXTO -> ARTICULOS .)
-    $end            reduce using rule 10 (TEXTO -> ARTICULOS .)
+    SUJETO          reduce using rule 10 (TEXTO -> DEMOSTRATIVOS .)
+    PRONOMBRES      reduce using rule 10 (TEXTO -> DEMOSTRATIVOS .)
+    SUSTANTIVOS     reduce using rule 10 (TEXTO -> DEMOSTRATIVOS .)
+    VERBOS          reduce using rule 10 (TEXTO -> DEMOSTRATIVOS .)
+    ADJETIVO        reduce using rule 10 (TEXTO -> DEMOSTRATIVOS .)
+    ADVERBIOS       reduce using rule 10 (TEXTO -> DEMOSTRATIVOS .)
+    PREPOSICIONES   reduce using rule 10 (TEXTO -> DEMOSTRATIVOS .)
+    ARTICULOS       reduce using rule 10 (TEXTO -> DEMOSTRATIVOS .)
+    DEMOSTRATIVOS   reduce using rule 10 (TEXTO -> DEMOSTRATIVOS .)
+    POSESIVOS       reduce using rule 10 (TEXTO -> DEMOSTRATIVOS .)
+    $end            reduce using rule 10 (TEXTO -> DEMOSTRATIVOS .)
 
 
 state 12
 
-    (11) TEXTO -> DEMOSTRATIVOS .
+    (11) TEXTO -> POSESIVOS .
 
-    SUJETO          reduce using rule 11 (TEXTO -> DEMOSTRATIVOS .)
-    PRONOMBRES      reduce using rule 11 (TEXTO -> DEMOSTRATIVOS .)
-    SUSTANTIVOS     reduce using rule 11 (TEXTO -> DEMOSTRATIVOS .)
-    VERBOPP         reduce using rule 11 (TEXTO -> DEMOSTRATIVOS .)
-    VERBOTP         reduce using rule 11 (TEXTO -> DEMOSTRATIVOS .)
-    ADJETIVO        reduce using rule 11 (TEXTO -> DEMOSTRATIVOS .)
-    ADVERBIOS       reduce using rule 11 (TEXTO -> DEMOSTRATIVOS .)
-    PREPOSICIONES   reduce using rule 11 (TEXTO -> DEMOSTRATIVOS .)
-    ARTICULOS       reduce using rule 11 (TEXTO -> DEMOSTRATIVOS .)
-    DEMOSTRATIVOS   reduce using rule 11 (TEXTO -> DEMOSTRATIVOS .)
-    POSESIVOS       reduce using rule 11 (TEXTO -> DEMOSTRATIVOS .)
-    $end            reduce using rule 11 (TEXTO -> DEMOSTRATIVOS .)
+    SUJETO          reduce using rule 11 (TEXTO -> POSESIVOS .)
+    PRONOMBRES      reduce using rule 11 (TEXTO -> POSESIVOS .)
+    SUSTANTIVOS     reduce using rule 11 (TEXTO -> POSESIVOS .)
+    VERBOS          reduce using rule 11 (TEXTO -> POSESIVOS .)
+    ADJETIVO        reduce using rule 11 (TEXTO -> POSESIVOS .)
+    ADVERBIOS       reduce using rule 11 (TEXTO -> POSESIVOS .)
+    PREPOSICIONES   reduce using rule 11 (TEXTO -> POSESIVOS .)
+    ARTICULOS       reduce using rule 11 (TEXTO -> POSESIVOS .)
+    DEMOSTRATIVOS   reduce using rule 11 (TEXTO -> POSESIVOS .)
+    POSESIVOS       reduce using rule 11 (TEXTO -> POSESIVOS .)
+    $end            reduce using rule 11 (TEXTO -> POSESIVOS .)
 
 
 state 13
 
-    (12) TEXTO -> POSESIVOS .
-
-    SUJETO          reduce using rule 12 (TEXTO -> POSESIVOS .)
-    PRONOMBRES      reduce using rule 12 (TEXTO -> POSESIVOS .)
-    SUSTANTIVOS     reduce using rule 12 (TEXTO -> POSESIVOS .)
-    VERBOPP         reduce using rule 12 (TEXTO -> POSESIVOS .)
-    VERBOTP         reduce using rule 12 (TEXTO -> POSESIVOS .)
-    ADJETIVO        reduce using rule 12 (TEXTO -> POSESIVOS .)
-    ADVERBIOS       reduce using rule 12 (TEXTO -> POSESIVOS .)
-    PREPOSICIONES   reduce using rule 12 (TEXTO -> POSESIVOS .)
-    ARTICULOS       reduce using rule 12 (TEXTO -> POSESIVOS .)
-    DEMOSTRATIVOS   reduce using rule 12 (TEXTO -> POSESIVOS .)
-    POSESIVOS       reduce using rule 12 (TEXTO -> POSESIVOS .)
-    $end            reduce using rule 12 (TEXTO -> POSESIVOS .)
-
-
-state 14
-
-    (15) oracion -> TEXTO TEXTO .
-    (18) oracion -> TEXTO TEXTO . TEXTO
-    (21) oracion -> TEXTO TEXTO . TEXTO TEXTO
-    (24) oracion -> TEXTO TEXTO . TEXTO TEXTO TEXTO
-    (27) oracion -> TEXTO TEXTO . TEXTO TEXTO TEXTO TEXTO
+    (13) oracion -> TEXTO TEXTO .
+    (15) oracion -> TEXTO TEXTO . TEXTO
+    (17) oracion -> TEXTO TEXTO . TEXTO TEXTO
+    (19) oracion -> TEXTO TEXTO . TEXTO TEXTO TEXTO
+    (21) oracion -> TEXTO TEXTO . TEXTO TEXTO TEXTO TEXTO
     (2) TEXTO -> . SUJETO
     (3) TEXTO -> . PRONOMBRES
     (4) TEXTO -> . SUSTANTIVOS
-    (5) TEXTO -> . VERBOPP
-    (6) TEXTO -> . VERBOTP
-    (7) TEXTO -> . ADJETIVO
-    (8) TEXTO -> . ADVERBIOS
-    (9) TEXTO -> . PREPOSICIONES
-    (10) TEXTO -> . ARTICULOS
-    (11) TEXTO -> . DEMOSTRATIVOS
-    (12) TEXTO -> . POSESIVOS
+    (5) TEXTO -> . VERBOS
+    (6) TEXTO -> . ADJETIVO
+    (7) TEXTO -> . ADVERBIOS
+    (8) TEXTO -> . PREPOSICIONES
+    (9) TEXTO -> . ARTICULOS
+    (10) TEXTO -> . DEMOSTRATIVOS
+    (11) TEXTO -> . POSESIVOS
 
-    $end            reduce using rule 15 (oracion -> TEXTO TEXTO .)
-    SUJETO          shift and go to state 15
-    PRONOMBRES      shift and go to state 6
-    SUSTANTIVOS     shift and go to state 7
-    VERBOPP         shift and go to state 4
-    VERBOTP         shift and go to state 5
-    ADJETIVO        shift and go to state 8
-    ADVERBIOS       shift and go to state 9
-    PREPOSICIONES   shift and go to state 10
-    ARTICULOS       shift and go to state 11
-    DEMOSTRATIVOS   shift and go to state 12
-    POSESIVOS       shift and go to state 13
+    $end            reduce using rule 13 (oracion -> TEXTO TEXTO .)
+    SUJETO          shift and go to state 14
+    PRONOMBRES      shift and go to state 5
+    SUSTANTIVOS     shift and go to state 6
+    VERBOS          shift and go to state 4
+    ADJETIVO        shift and go to state 7
+    ADVERBIOS       shift and go to state 8
+    PREPOSICIONES   shift and go to state 9
+    ARTICULOS       shift and go to state 10
+    DEMOSTRATIVOS   shift and go to state 11
+    POSESIVOS       shift and go to state 12
 
-    TEXTO                          shift and go to state 18
+    TEXTO                          shift and go to state 16
 
-state 15
+state 14
 
     (2) TEXTO -> SUJETO .
 
     SUJETO          reduce using rule 2 (TEXTO -> SUJETO .)
     PRONOMBRES      reduce using rule 2 (TEXTO -> SUJETO .)
     SUSTANTIVOS     reduce using rule 2 (TEXTO -> SUJETO .)
-    VERBOPP         reduce using rule 2 (TEXTO -> SUJETO .)
-    VERBOTP         reduce using rule 2 (TEXTO -> SUJETO .)
+    VERBOS          reduce using rule 2 (TEXTO -> SUJETO .)
     ADJETIVO        reduce using rule 2 (TEXTO -> SUJETO .)
     ADVERBIOS       reduce using rule 2 (TEXTO -> SUJETO .)
     PREPOSICIONES   reduce using rule 2 (TEXTO -> SUJETO .)
@@ -405,384 +351,232 @@ state 15
     $end            reduce using rule 2 (TEXTO -> SUJETO .)
 
 
-state 16
+state 15
 
-    (13) oracion -> SUJETO VERBOPP .
-    (17) oracion -> SUJETO VERBOPP . TEXTO
-    (19) oracion -> SUJETO VERBOPP . TEXTO TEXTO
-    (22) oracion -> SUJETO VERBOPP . TEXTO TEXTO TEXTO
-    (25) oracion -> SUJETO VERBOPP . TEXTO TEXTO TEXTO TEXTO
+    (12) oracion -> SUJETO VERBOS .
+    (14) oracion -> SUJETO VERBOS . TEXTO
+    (16) oracion -> SUJETO VERBOS . TEXTO TEXTO
+    (18) oracion -> SUJETO VERBOS . TEXTO TEXTO TEXTO
+    (20) oracion -> SUJETO VERBOS . TEXTO TEXTO TEXTO TEXTO
     (2) TEXTO -> . SUJETO
     (3) TEXTO -> . PRONOMBRES
     (4) TEXTO -> . SUSTANTIVOS
-    (5) TEXTO -> . VERBOPP
-    (6) TEXTO -> . VERBOTP
-    (7) TEXTO -> . ADJETIVO
-    (8) TEXTO -> . ADVERBIOS
-    (9) TEXTO -> . PREPOSICIONES
-    (10) TEXTO -> . ARTICULOS
-    (11) TEXTO -> . DEMOSTRATIVOS
-    (12) TEXTO -> . POSESIVOS
+    (5) TEXTO -> . VERBOS
+    (6) TEXTO -> . ADJETIVO
+    (7) TEXTO -> . ADVERBIOS
+    (8) TEXTO -> . PREPOSICIONES
+    (9) TEXTO -> . ARTICULOS
+    (10) TEXTO -> . DEMOSTRATIVOS
+    (11) TEXTO -> . POSESIVOS
 
-    $end            reduce using rule 13 (oracion -> SUJETO VERBOPP .)
-    SUJETO          shift and go to state 15
-    PRONOMBRES      shift and go to state 6
-    SUSTANTIVOS     shift and go to state 7
-    VERBOPP         shift and go to state 4
-    VERBOTP         shift and go to state 5
-    ADJETIVO        shift and go to state 8
-    ADVERBIOS       shift and go to state 9
-    PREPOSICIONES   shift and go to state 10
-    ARTICULOS       shift and go to state 11
-    DEMOSTRATIVOS   shift and go to state 12
-    POSESIVOS       shift and go to state 13
+    $end            reduce using rule 12 (oracion -> SUJETO VERBOS .)
+    SUJETO          shift and go to state 14
+    PRONOMBRES      shift and go to state 5
+    SUSTANTIVOS     shift and go to state 6
+    VERBOS          shift and go to state 4
+    ADJETIVO        shift and go to state 7
+    ADVERBIOS       shift and go to state 8
+    PREPOSICIONES   shift and go to state 9
+    ARTICULOS       shift and go to state 10
+    DEMOSTRATIVOS   shift and go to state 11
+    POSESIVOS       shift and go to state 12
 
-    TEXTO                          shift and go to state 19
+    TEXTO                          shift and go to state 17
+
+state 16
+
+    (15) oracion -> TEXTO TEXTO TEXTO .
+    (17) oracion -> TEXTO TEXTO TEXTO . TEXTO
+    (19) oracion -> TEXTO TEXTO TEXTO . TEXTO TEXTO
+    (21) oracion -> TEXTO TEXTO TEXTO . TEXTO TEXTO TEXTO
+    (2) TEXTO -> . SUJETO
+    (3) TEXTO -> . PRONOMBRES
+    (4) TEXTO -> . SUSTANTIVOS
+    (5) TEXTO -> . VERBOS
+    (6) TEXTO -> . ADJETIVO
+    (7) TEXTO -> . ADVERBIOS
+    (8) TEXTO -> . PREPOSICIONES
+    (9) TEXTO -> . ARTICULOS
+    (10) TEXTO -> . DEMOSTRATIVOS
+    (11) TEXTO -> . POSESIVOS
+
+    $end            reduce using rule 15 (oracion -> TEXTO TEXTO TEXTO .)
+    SUJETO          shift and go to state 14
+    PRONOMBRES      shift and go to state 5
+    SUSTANTIVOS     shift and go to state 6
+    VERBOS          shift and go to state 4
+    ADJETIVO        shift and go to state 7
+    ADVERBIOS       shift and go to state 8
+    PREPOSICIONES   shift and go to state 9
+    ARTICULOS       shift and go to state 10
+    DEMOSTRATIVOS   shift and go to state 11
+    POSESIVOS       shift and go to state 12
+
+    TEXTO                          shift and go to state 18
 
 state 17
 
-    (14) oracion -> SUJETO VERBOTP .
-    (16) oracion -> SUJETO VERBOTP . TEXTO
-    (20) oracion -> SUJETO VERBOTP . TEXTO TEXTO
-    (23) oracion -> SUJETO VERBOTP . TEXTO TEXTO TEXTO
-    (26) oracion -> SUJETO VERBOTP . TEXTO TEXTO TEXTO TEXTO
+    (14) oracion -> SUJETO VERBOS TEXTO .
+    (16) oracion -> SUJETO VERBOS TEXTO . TEXTO
+    (18) oracion -> SUJETO VERBOS TEXTO . TEXTO TEXTO
+    (20) oracion -> SUJETO VERBOS TEXTO . TEXTO TEXTO TEXTO
     (2) TEXTO -> . SUJETO
     (3) TEXTO -> . PRONOMBRES
     (4) TEXTO -> . SUSTANTIVOS
-    (5) TEXTO -> . VERBOPP
-    (6) TEXTO -> . VERBOTP
-    (7) TEXTO -> . ADJETIVO
-    (8) TEXTO -> . ADVERBIOS
-    (9) TEXTO -> . PREPOSICIONES
-    (10) TEXTO -> . ARTICULOS
-    (11) TEXTO -> . DEMOSTRATIVOS
-    (12) TEXTO -> . POSESIVOS
+    (5) TEXTO -> . VERBOS
+    (6) TEXTO -> . ADJETIVO
+    (7) TEXTO -> . ADVERBIOS
+    (8) TEXTO -> . PREPOSICIONES
+    (9) TEXTO -> . ARTICULOS
+    (10) TEXTO -> . DEMOSTRATIVOS
+    (11) TEXTO -> . POSESIVOS
 
-    $end            reduce using rule 14 (oracion -> SUJETO VERBOTP .)
-    SUJETO          shift and go to state 15
-    PRONOMBRES      shift and go to state 6
-    SUSTANTIVOS     shift and go to state 7
-    VERBOPP         shift and go to state 4
-    VERBOTP         shift and go to state 5
-    ADJETIVO        shift and go to state 8
-    ADVERBIOS       shift and go to state 9
-    PREPOSICIONES   shift and go to state 10
-    ARTICULOS       shift and go to state 11
-    DEMOSTRATIVOS   shift and go to state 12
-    POSESIVOS       shift and go to state 13
+    $end            reduce using rule 14 (oracion -> SUJETO VERBOS TEXTO .)
+    SUJETO          shift and go to state 14
+    PRONOMBRES      shift and go to state 5
+    SUSTANTIVOS     shift and go to state 6
+    VERBOS          shift and go to state 4
+    ADJETIVO        shift and go to state 7
+    ADVERBIOS       shift and go to state 8
+    PREPOSICIONES   shift and go to state 9
+    ARTICULOS       shift and go to state 10
+    DEMOSTRATIVOS   shift and go to state 11
+    POSESIVOS       shift and go to state 12
 
-    TEXTO                          shift and go to state 20
+    TEXTO                          shift and go to state 19
 
 state 18
 
-    (18) oracion -> TEXTO TEXTO TEXTO .
-    (21) oracion -> TEXTO TEXTO TEXTO . TEXTO
-    (24) oracion -> TEXTO TEXTO TEXTO . TEXTO TEXTO
-    (27) oracion -> TEXTO TEXTO TEXTO . TEXTO TEXTO TEXTO
+    (17) oracion -> TEXTO TEXTO TEXTO TEXTO .
+    (19) oracion -> TEXTO TEXTO TEXTO TEXTO . TEXTO
+    (21) oracion -> TEXTO TEXTO TEXTO TEXTO . TEXTO TEXTO
     (2) TEXTO -> . SUJETO
     (3) TEXTO -> . PRONOMBRES
     (4) TEXTO -> . SUSTANTIVOS
-    (5) TEXTO -> . VERBOPP
-    (6) TEXTO -> . VERBOTP
-    (7) TEXTO -> . ADJETIVO
-    (8) TEXTO -> . ADVERBIOS
-    (9) TEXTO -> . PREPOSICIONES
-    (10) TEXTO -> . ARTICULOS
-    (11) TEXTO -> . DEMOSTRATIVOS
-    (12) TEXTO -> . POSESIVOS
+    (5) TEXTO -> . VERBOS
+    (6) TEXTO -> . ADJETIVO
+    (7) TEXTO -> . ADVERBIOS
+    (8) TEXTO -> . PREPOSICIONES
+    (9) TEXTO -> . ARTICULOS
+    (10) TEXTO -> . DEMOSTRATIVOS
+    (11) TEXTO -> . POSESIVOS
 
-    $end            reduce using rule 18 (oracion -> TEXTO TEXTO TEXTO .)
-    SUJETO          shift and go to state 15
-    PRONOMBRES      shift and go to state 6
-    SUSTANTIVOS     shift and go to state 7
-    VERBOPP         shift and go to state 4
-    VERBOTP         shift and go to state 5
-    ADJETIVO        shift and go to state 8
-    ADVERBIOS       shift and go to state 9
-    PREPOSICIONES   shift and go to state 10
-    ARTICULOS       shift and go to state 11
-    DEMOSTRATIVOS   shift and go to state 12
-    POSESIVOS       shift and go to state 13
+    $end            reduce using rule 17 (oracion -> TEXTO TEXTO TEXTO TEXTO .)
+    SUJETO          shift and go to state 14
+    PRONOMBRES      shift and go to state 5
+    SUSTANTIVOS     shift and go to state 6
+    VERBOS          shift and go to state 4
+    ADJETIVO        shift and go to state 7
+    ADVERBIOS       shift and go to state 8
+    PREPOSICIONES   shift and go to state 9
+    ARTICULOS       shift and go to state 10
+    DEMOSTRATIVOS   shift and go to state 11
+    POSESIVOS       shift and go to state 12
 
-    TEXTO                          shift and go to state 21
+    TEXTO                          shift and go to state 20
 
 state 19
 
-    (17) oracion -> SUJETO VERBOPP TEXTO .
-    (19) oracion -> SUJETO VERBOPP TEXTO . TEXTO
-    (22) oracion -> SUJETO VERBOPP TEXTO . TEXTO TEXTO
-    (25) oracion -> SUJETO VERBOPP TEXTO . TEXTO TEXTO TEXTO
+    (16) oracion -> SUJETO VERBOS TEXTO TEXTO .
+    (18) oracion -> SUJETO VERBOS TEXTO TEXTO . TEXTO
+    (20) oracion -> SUJETO VERBOS TEXTO TEXTO . TEXTO TEXTO
     (2) TEXTO -> . SUJETO
     (3) TEXTO -> . PRONOMBRES
     (4) TEXTO -> . SUSTANTIVOS
-    (5) TEXTO -> . VERBOPP
-    (6) TEXTO -> . VERBOTP
-    (7) TEXTO -> . ADJETIVO
-    (8) TEXTO -> . ADVERBIOS
-    (9) TEXTO -> . PREPOSICIONES
-    (10) TEXTO -> . ARTICULOS
-    (11) TEXTO -> . DEMOSTRATIVOS
-    (12) TEXTO -> . POSESIVOS
+    (5) TEXTO -> . VERBOS
+    (6) TEXTO -> . ADJETIVO
+    (7) TEXTO -> . ADVERBIOS
+    (8) TEXTO -> . PREPOSICIONES
+    (9) TEXTO -> . ARTICULOS
+    (10) TEXTO -> . DEMOSTRATIVOS
+    (11) TEXTO -> . POSESIVOS
 
-    $end            reduce using rule 17 (oracion -> SUJETO VERBOPP TEXTO .)
-    SUJETO          shift and go to state 15
-    PRONOMBRES      shift and go to state 6
-    SUSTANTIVOS     shift and go to state 7
-    VERBOPP         shift and go to state 4
-    VERBOTP         shift and go to state 5
-    ADJETIVO        shift and go to state 8
-    ADVERBIOS       shift and go to state 9
-    PREPOSICIONES   shift and go to state 10
-    ARTICULOS       shift and go to state 11
-    DEMOSTRATIVOS   shift and go to state 12
-    POSESIVOS       shift and go to state 13
+    $end            reduce using rule 16 (oracion -> SUJETO VERBOS TEXTO TEXTO .)
+    SUJETO          shift and go to state 14
+    PRONOMBRES      shift and go to state 5
+    SUSTANTIVOS     shift and go to state 6
+    VERBOS          shift and go to state 4
+    ADJETIVO        shift and go to state 7
+    ADVERBIOS       shift and go to state 8
+    PREPOSICIONES   shift and go to state 9
+    ARTICULOS       shift and go to state 10
+    DEMOSTRATIVOS   shift and go to state 11
+    POSESIVOS       shift and go to state 12
 
-    TEXTO                          shift and go to state 22
+    TEXTO                          shift and go to state 21
 
 state 20
 
-    (16) oracion -> SUJETO VERBOTP TEXTO .
-    (20) oracion -> SUJETO VERBOTP TEXTO . TEXTO
-    (23) oracion -> SUJETO VERBOTP TEXTO . TEXTO TEXTO
-    (26) oracion -> SUJETO VERBOTP TEXTO . TEXTO TEXTO TEXTO
+    (19) oracion -> TEXTO TEXTO TEXTO TEXTO TEXTO .
+    (21) oracion -> TEXTO TEXTO TEXTO TEXTO TEXTO . TEXTO
     (2) TEXTO -> . SUJETO
     (3) TEXTO -> . PRONOMBRES
     (4) TEXTO -> . SUSTANTIVOS
-    (5) TEXTO -> . VERBOPP
-    (6) TEXTO -> . VERBOTP
-    (7) TEXTO -> . ADJETIVO
-    (8) TEXTO -> . ADVERBIOS
-    (9) TEXTO -> . PREPOSICIONES
-    (10) TEXTO -> . ARTICULOS
-    (11) TEXTO -> . DEMOSTRATIVOS
-    (12) TEXTO -> . POSESIVOS
+    (5) TEXTO -> . VERBOS
+    (6) TEXTO -> . ADJETIVO
+    (7) TEXTO -> . ADVERBIOS
+    (8) TEXTO -> . PREPOSICIONES
+    (9) TEXTO -> . ARTICULOS
+    (10) TEXTO -> . DEMOSTRATIVOS
+    (11) TEXTO -> . POSESIVOS
 
-    $end            reduce using rule 16 (oracion -> SUJETO VERBOTP TEXTO .)
-    SUJETO          shift and go to state 15
-    PRONOMBRES      shift and go to state 6
-    SUSTANTIVOS     shift and go to state 7
-    VERBOPP         shift and go to state 4
-    VERBOTP         shift and go to state 5
-    ADJETIVO        shift and go to state 8
-    ADVERBIOS       shift and go to state 9
-    PREPOSICIONES   shift and go to state 10
-    ARTICULOS       shift and go to state 11
-    DEMOSTRATIVOS   shift and go to state 12
-    POSESIVOS       shift and go to state 13
+    $end            reduce using rule 19 (oracion -> TEXTO TEXTO TEXTO TEXTO TEXTO .)
+    SUJETO          shift and go to state 14
+    PRONOMBRES      shift and go to state 5
+    SUSTANTIVOS     shift and go to state 6
+    VERBOS          shift and go to state 4
+    ADJETIVO        shift and go to state 7
+    ADVERBIOS       shift and go to state 8
+    PREPOSICIONES   shift and go to state 9
+    ARTICULOS       shift and go to state 10
+    DEMOSTRATIVOS   shift and go to state 11
+    POSESIVOS       shift and go to state 12
 
-    TEXTO                          shift and go to state 23
+    TEXTO                          shift and go to state 22
 
 state 21
 
-    (21) oracion -> TEXTO TEXTO TEXTO TEXTO .
-    (24) oracion -> TEXTO TEXTO TEXTO TEXTO . TEXTO
-    (27) oracion -> TEXTO TEXTO TEXTO TEXTO . TEXTO TEXTO
+    (18) oracion -> SUJETO VERBOS TEXTO TEXTO TEXTO .
+    (20) oracion -> SUJETO VERBOS TEXTO TEXTO TEXTO . TEXTO
     (2) TEXTO -> . SUJETO
     (3) TEXTO -> . PRONOMBRES
     (4) TEXTO -> . SUSTANTIVOS
-    (5) TEXTO -> . VERBOPP
-    (6) TEXTO -> . VERBOTP
-    (7) TEXTO -> . ADJETIVO
-    (8) TEXTO -> . ADVERBIOS
-    (9) TEXTO -> . PREPOSICIONES
-    (10) TEXTO -> . ARTICULOS
-    (11) TEXTO -> . DEMOSTRATIVOS
-    (12) TEXTO -> . POSESIVOS
+    (5) TEXTO -> . VERBOS
+    (6) TEXTO -> . ADJETIVO
+    (7) TEXTO -> . ADVERBIOS
+    (8) TEXTO -> . PREPOSICIONES
+    (9) TEXTO -> . ARTICULOS
+    (10) TEXTO -> . DEMOSTRATIVOS
+    (11) TEXTO -> . POSESIVOS
 
-    $end            reduce using rule 21 (oracion -> TEXTO TEXTO TEXTO TEXTO .)
-    SUJETO          shift and go to state 15
-    PRONOMBRES      shift and go to state 6
-    SUSTANTIVOS     shift and go to state 7
-    VERBOPP         shift and go to state 4
-    VERBOTP         shift and go to state 5
-    ADJETIVO        shift and go to state 8
-    ADVERBIOS       shift and go to state 9
-    PREPOSICIONES   shift and go to state 10
-    ARTICULOS       shift and go to state 11
-    DEMOSTRATIVOS   shift and go to state 12
-    POSESIVOS       shift and go to state 13
+    $end            reduce using rule 18 (oracion -> SUJETO VERBOS TEXTO TEXTO TEXTO .)
+    SUJETO          shift and go to state 14
+    PRONOMBRES      shift and go to state 5
+    SUSTANTIVOS     shift and go to state 6
+    VERBOS          shift and go to state 4
+    ADJETIVO        shift and go to state 7
+    ADVERBIOS       shift and go to state 8
+    PREPOSICIONES   shift and go to state 9
+    ARTICULOS       shift and go to state 10
+    DEMOSTRATIVOS   shift and go to state 11
+    POSESIVOS       shift and go to state 12
 
-    TEXTO                          shift and go to state 24
+    TEXTO                          shift and go to state 23
 
 state 22
 
-    (19) oracion -> SUJETO VERBOPP TEXTO TEXTO .
-    (22) oracion -> SUJETO VERBOPP TEXTO TEXTO . TEXTO
-    (25) oracion -> SUJETO VERBOPP TEXTO TEXTO . TEXTO TEXTO
-    (2) TEXTO -> . SUJETO
-    (3) TEXTO -> . PRONOMBRES
-    (4) TEXTO -> . SUSTANTIVOS
-    (5) TEXTO -> . VERBOPP
-    (6) TEXTO -> . VERBOTP
-    (7) TEXTO -> . ADJETIVO
-    (8) TEXTO -> . ADVERBIOS
-    (9) TEXTO -> . PREPOSICIONES
-    (10) TEXTO -> . ARTICULOS
-    (11) TEXTO -> . DEMOSTRATIVOS
-    (12) TEXTO -> . POSESIVOS
+    (21) oracion -> TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO .
 
-    $end            reduce using rule 19 (oracion -> SUJETO VERBOPP TEXTO TEXTO .)
-    SUJETO          shift and go to state 15
-    PRONOMBRES      shift and go to state 6
-    SUSTANTIVOS     shift and go to state 7
-    VERBOPP         shift and go to state 4
-    VERBOTP         shift and go to state 5
-    ADJETIVO        shift and go to state 8
-    ADVERBIOS       shift and go to state 9
-    PREPOSICIONES   shift and go to state 10
-    ARTICULOS       shift and go to state 11
-    DEMOSTRATIVOS   shift and go to state 12
-    POSESIVOS       shift and go to state 13
+    $end            reduce using rule 21 (oracion -> TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO .)
 
-    TEXTO                          shift and go to state 25
 
 state 23
 
-    (20) oracion -> SUJETO VERBOTP TEXTO TEXTO .
-    (23) oracion -> SUJETO VERBOTP TEXTO TEXTO . TEXTO
-    (26) oracion -> SUJETO VERBOTP TEXTO TEXTO . TEXTO TEXTO
-    (2) TEXTO -> . SUJETO
-    (3) TEXTO -> . PRONOMBRES
-    (4) TEXTO -> . SUSTANTIVOS
-    (5) TEXTO -> . VERBOPP
-    (6) TEXTO -> . VERBOTP
-    (7) TEXTO -> . ADJETIVO
-    (8) TEXTO -> . ADVERBIOS
-    (9) TEXTO -> . PREPOSICIONES
-    (10) TEXTO -> . ARTICULOS
-    (11) TEXTO -> . DEMOSTRATIVOS
-    (12) TEXTO -> . POSESIVOS
+    (20) oracion -> SUJETO VERBOS TEXTO TEXTO TEXTO TEXTO .
 
-    $end            reduce using rule 20 (oracion -> SUJETO VERBOTP TEXTO TEXTO .)
-    SUJETO          shift and go to state 15
-    PRONOMBRES      shift and go to state 6
-    SUSTANTIVOS     shift and go to state 7
-    VERBOPP         shift and go to state 4
-    VERBOTP         shift and go to state 5
-    ADJETIVO        shift and go to state 8
-    ADVERBIOS       shift and go to state 9
-    PREPOSICIONES   shift and go to state 10
-    ARTICULOS       shift and go to state 11
-    DEMOSTRATIVOS   shift and go to state 12
-    POSESIVOS       shift and go to state 13
-
-    TEXTO                          shift and go to state 26
-
-state 24
-
-    (24) oracion -> TEXTO TEXTO TEXTO TEXTO TEXTO .
-    (27) oracion -> TEXTO TEXTO TEXTO TEXTO TEXTO . TEXTO
-    (2) TEXTO -> . SUJETO
-    (3) TEXTO -> . PRONOMBRES
-    (4) TEXTO -> . SUSTANTIVOS
-    (5) TEXTO -> . VERBOPP
-    (6) TEXTO -> . VERBOTP
-    (7) TEXTO -> . ADJETIVO
-    (8) TEXTO -> . ADVERBIOS
-    (9) TEXTO -> . PREPOSICIONES
-    (10) TEXTO -> . ARTICULOS
-    (11) TEXTO -> . DEMOSTRATIVOS
-    (12) TEXTO -> . POSESIVOS
-
-    $end            reduce using rule 24 (oracion -> TEXTO TEXTO TEXTO TEXTO TEXTO .)
-    SUJETO          shift and go to state 15
-    PRONOMBRES      shift and go to state 6
-    SUSTANTIVOS     shift and go to state 7
-    VERBOPP         shift and go to state 4
-    VERBOTP         shift and go to state 5
-    ADJETIVO        shift and go to state 8
-    ADVERBIOS       shift and go to state 9
-    PREPOSICIONES   shift and go to state 10
-    ARTICULOS       shift and go to state 11
-    DEMOSTRATIVOS   shift and go to state 12
-    POSESIVOS       shift and go to state 13
-
-    TEXTO                          shift and go to state 27
-
-state 25
-
-    (22) oracion -> SUJETO VERBOPP TEXTO TEXTO TEXTO .
-    (25) oracion -> SUJETO VERBOPP TEXTO TEXTO TEXTO . TEXTO
-    (2) TEXTO -> . SUJETO
-    (3) TEXTO -> . PRONOMBRES
-    (4) TEXTO -> . SUSTANTIVOS
-    (5) TEXTO -> . VERBOPP
-    (6) TEXTO -> . VERBOTP
-    (7) TEXTO -> . ADJETIVO
-    (8) TEXTO -> . ADVERBIOS
-    (9) TEXTO -> . PREPOSICIONES
-    (10) TEXTO -> . ARTICULOS
-    (11) TEXTO -> . DEMOSTRATIVOS
-    (12) TEXTO -> . POSESIVOS
-
-    $end            reduce using rule 22 (oracion -> SUJETO VERBOPP TEXTO TEXTO TEXTO .)
-    SUJETO          shift and go to state 15
-    PRONOMBRES      shift and go to state 6
-    SUSTANTIVOS     shift and go to state 7
-    VERBOPP         shift and go to state 4
-    VERBOTP         shift and go to state 5
-    ADJETIVO        shift and go to state 8
-    ADVERBIOS       shift and go to state 9
-    PREPOSICIONES   shift and go to state 10
-    ARTICULOS       shift and go to state 11
-    DEMOSTRATIVOS   shift and go to state 12
-    POSESIVOS       shift and go to state 13
-
-    TEXTO                          shift and go to state 28
-
-state 26
-
-    (23) oracion -> SUJETO VERBOTP TEXTO TEXTO TEXTO .
-    (26) oracion -> SUJETO VERBOTP TEXTO TEXTO TEXTO . TEXTO
-    (2) TEXTO -> . SUJETO
-    (3) TEXTO -> . PRONOMBRES
-    (4) TEXTO -> . SUSTANTIVOS
-    (5) TEXTO -> . VERBOPP
-    (6) TEXTO -> . VERBOTP
-    (7) TEXTO -> . ADJETIVO
-    (8) TEXTO -> . ADVERBIOS
-    (9) TEXTO -> . PREPOSICIONES
-    (10) TEXTO -> . ARTICULOS
-    (11) TEXTO -> . DEMOSTRATIVOS
-    (12) TEXTO -> . POSESIVOS
-
-    $end            reduce using rule 23 (oracion -> SUJETO VERBOTP TEXTO TEXTO TEXTO .)
-    SUJETO          shift and go to state 15
-    PRONOMBRES      shift and go to state 6
-    SUSTANTIVOS     shift and go to state 7
-    VERBOPP         shift and go to state 4
-    VERBOTP         shift and go to state 5
-    ADJETIVO        shift and go to state 8
-    ADVERBIOS       shift and go to state 9
-    PREPOSICIONES   shift and go to state 10
-    ARTICULOS       shift and go to state 11
-    DEMOSTRATIVOS   shift and go to state 12
-    POSESIVOS       shift and go to state 13
-
-    TEXTO                          shift and go to state 29
-
-state 27
-
-    (27) oracion -> TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO .
-
-    $end            reduce using rule 27 (oracion -> TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO .)
-
-
-state 28
-
-    (25) oracion -> SUJETO VERBOPP TEXTO TEXTO TEXTO TEXTO .
-
-    $end            reduce using rule 25 (oracion -> SUJETO VERBOPP TEXTO TEXTO TEXTO TEXTO .)
-
-
-state 29
-
-    (26) oracion -> SUJETO VERBOTP TEXTO TEXTO TEXTO TEXTO .
-
-    $end            reduce using rule 26 (oracion -> SUJETO VERBOTP TEXTO TEXTO TEXTO TEXTO .)
+    $end            reduce using rule 20 (oracion -> SUJETO VERBOS TEXTO TEXTO TEXTO TEXTO .)
 
 WARNING: 
 WARNING: Conflicts:
 WARNING: 
-WARNING: shift/reduce conflict for VERBOPP in state 3 resolved as shift
-WARNING: shift/reduce conflict for VERBOTP in state 3 resolved as shift
+WARNING: shift/reduce conflict for VERBOS in state 3 resolved as shift

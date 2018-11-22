@@ -10,11 +10,11 @@ tokens = lexer.tokens
 
 # def p_oracionin(p):
 #     '''
-#     oracion : VERBOPP SUJETO SUSTANTIVOS
-#             | VERBOTP SUSTANTIVOS SUJETO
-#             | SUJETO SUSTANTIVOS VERBOPP
-#             | SUSTANTIVOS VERBOPP SUJETO
-#             | SUSTANTIVOS SUJETO VERBOPP
+#     oracion : VERBOS SUJETO SUSTANTIVOS
+#             | VERBOS SUSTANTIVOS SUJETO
+#             | SUJETO SUSTANTIVOS VERBOS
+#             | SUSTANTIVOS VERBOS SUJETO
+#             | SUSTANTIVOS SUJETO VERBOS
 #     '''
 #     p[0] = "gramatica incorrecta"  
 
@@ -36,8 +36,7 @@ def p_oracion0(p):
       TEXTO : SUJETO
             | PRONOMBRES
             | SUSTANTIVOS
-            | VERBOPP
-            | VERBOTP
+            | VERBOS
             | ADJETIVO
             | ADVERBIOS
             | PREPOSICIONES
@@ -51,8 +50,7 @@ def p_oracion0(p):
 #-------------------------2------------------------#
 def p_oracion2(p):
     '''
-    oracion : SUJETO VERBOPP
-            | SUJETO VERBOTP
+    oracion : SUJETO VERBOS
             | TEXTO TEXTO
     '''
     p[0] = "GRAMATICA CORRECTA"
@@ -67,8 +65,7 @@ def p_oracion2(p):
 
 def p_oracion3(p):
     '''
-    oracion : SUJETO VERBOTP TEXTO
-            | SUJETO VERBOPP TEXTO 
+    oracion : SUJETO VERBOS TEXTO
             | TEXTO TEXTO TEXTO 
     '''
     p[0] = "GRAMATICA CORRECTA"
@@ -83,8 +80,7 @@ def p_oracion3(p):
 
 def p_oracion4(p):
     '''
-    oracion : SUJETO VERBOPP TEXTO TEXTO
-            | SUJETO VERBOTP TEXTO TEXTO
+    oracion : SUJETO VERBOS TEXTO TEXTO
             | TEXTO TEXTO TEXTO TEXTO
     '''
     p[0] = "GRAMATICA CORRECTA"
@@ -98,8 +94,7 @@ def p_oracion4(p):
 
 def p_oracion5(p):
     '''
-    oracion : SUJETO VERBOPP TEXTO TEXTO TEXTO
-            | SUJETO VERBOTP TEXTO TEXTO TEXTO
+    oracion : SUJETO VERBOS TEXTO TEXTO TEXTO
             | TEXTO TEXTO TEXTO TEXTO TEXTO
     '''
     p[0] = "GRAMATICA CORRECTA"
@@ -114,8 +109,7 @@ def p_oracion5(p):
 
 def p_oracion6(p):
     '''
-    oracion : SUJETO VERBOPP TEXTO TEXTO TEXTO TEXTO
-            | SUJETO VERBOTP TEXTO TEXTO TEXTO TEXTO
+    oracion : SUJETO VERBOS TEXTO TEXTO TEXTO TEXTO
             | TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO
     '''
     p[0] = "GRAMATICA CORRECTA"

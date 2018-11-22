@@ -3,17 +3,17 @@ import sys
 
 tokens = [
     'SUJETO','PRONOMBRES','SUSTANTIVOS',
-    'VERBOPP', 'VERBOTP','ADJETIVO',
-    'ADVERBIOS','PREPOSICIONES','ARTICULOS',
-    'DEMOSTRATIVOS', 'POSESIVOS'
+     'VERBOS','ADJETIVO',
+    'ADVERBIOS','PREPOSICIONES',
+    'ARTICULOS','DEMOSTRATIVOS', 'POSESIVOS'
+    
     ]
-t_SUJETO = r'it|you|they|we|she|he|i'
+t_SUJETO = r'it|you|they|we|she|her|i|he'
 
 t_PRONOMBRES = r'me|her|him|us|them'
 t_SUSTANTIVOS = r'letter|book|car|dog|house|yesterday'
 
-t_VERBOPP = r'am|are|write|dance|sing|have|was|were|wrote|danced|sang|had'
-t_VERBOTP = r'is|writes|dances|sings|has'
+t_VERBOS = r'is|writes|dances|sings|has|am|are|write|dance|sing|have|was|were|wrote|danced|sang|had'
 
 t_ADJETIVO =  r'fast|good|bad|large|small'
 t_ADVERBIOS = r'very|late|now|never|always' 
