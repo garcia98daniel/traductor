@@ -10,19 +10,19 @@ tokens = [
 t_SUJETO = r'it|you|they|we|she|he|i'
 
 t_PRONOMBRES = r'me|her|him|us|them'
-t_SUSTANTIVOS = r'today|day|family|monday|tuesday|wednesday|thursday|friday|saturday|sunday|bed|arm|aircraft|blood|bone|book|bread|bull|bus|car|cat|dog|doll|chair|chicken|coin|face|gall|hat|hand|house|kid|lady|leg|man|mouse|ring|sun|table|woman|exam|letter'
+t_SUSTANTIVOS = r'letter|book|car|dog|house|yesterday'
 
-t_VERBOPP = r'am|are|write|danced|sing|have|wrote|was|were|dance|sang|had'
-t_VERBOTP = r'is|studies|cries|travels|pulls|cooks|dresses|lerns|listens|asks|calls|runs|eats|sleeps|drinks|watches|plays|talks|uses|takes|jumps|loves|wants|dances'
+t_VERBOPP = r'am|are|write|dance|sing|have|was|were|wrote|danced|sang|had'
+t_VERBOTP = r'is|writes|dances|sings|has'
 
-t_ADJETIVO =  r'fast|good|bad|large|small|long|short|thick|narrow|deep|low|high|near|fat|quick|slow|early|late|dark|clear|sunny|cloud|warm|cool|hot|wet'
-t_ADVERBIOS = r'very|today|yesterday|tomorrow|late|early|now|never|always|often|sometimes|here|there|everywhere|inside|outside|every' 
+t_ADJETIVO =  r'fast|good|bad|large|small'
+t_ADVERBIOS = r'very|late|now|never|always' 
 
-t_PREPOSICIONES = r'and|about|after|at|behind|between|by|from|over|without|above|before|below|but|down|for|in|like|of|since|to|up|with'
-t_ARTICULOS = r'the|a|some|one|few'
+t_PREPOSICIONES = r'and|about|after|at|between'
+t_ARTICULOS = r'the|a|some|one|few|with'
 
-#t_DEMOSTRATIVOS = r'those|these|that|this'
-#t_POSESIVOS = r'mine|yours|his|hers|ours|yours|theirs'
+t_DEMOSTRATIVOS = r'those|these|that|this'
+t_POSESIVOS = r'mine|yours|his|hers|ours|yours|theirs'
 
 t_ignore = " "
 

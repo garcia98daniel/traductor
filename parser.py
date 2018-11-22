@@ -5,32 +5,31 @@ import traductor
 tokens = lexer.tokens
 
 
-# def p_oracion(p):
-#     '''
-#     oracion : palabra 
-#             | palabra oracion
-#     '''
-#     pass
-
-# def p_palabra(p):
-#     '''
-#     palabra : SUJETO 
-#             | VERBOPP
-            
-#     '''
-#     pass
 
 #--------------------INCORRECT----------------------#
 
-def p_oracionin(p):
+# def p_oracionin(p):
+#     '''
+#     oracion : VERBOPP SUJETO SUSTANTIVOS
+#             | VERBOTP SUSTANTIVOS SUJETO
+#             | SUJETO SUSTANTIVOS VERBOPP
+#             | SUSTANTIVOS VERBOPP SUJETO
+#             | SUSTANTIVOS SUJETO VERBOPP
+#     '''
+#     p[0] = "gramatica incorrecta"  
+
+
+#-------------------------1------------------------#
+def p_oracion1(p):
     '''
-    oracion : VERBOPP SUJETO SUSTANTIVOS
-            | VERBOTP SUSTANTIVOS SUJETO
-            | SUJETO SUSTANTIVOS VERBOPP
-            | SUSTANTIVOS VERBOPP SUJETO
-            | SUSTANTIVOS SUJETO VERBOPP
+    oracion : TEXTO
     '''
-    p[0] = "gramatica incorrecta"  
+    p[0] = "GRAMATICA CORRECTA"
+    print(p[0])
+    palabras_a_traducir = [];
+    palabras_a_traducir.append(p[1]);
+    p[0] = traductor.traducir(palabras_a_traducir)  
+
 
 def p_oracion0(p):
     '''
@@ -47,27 +46,6 @@ def p_oracion0(p):
             | POSESIVOS
     '''
     p[0] = p[1]
-
-#-------------------------1------------------------#
-def p_oracion1(p):
-    '''
-    oracion : SUJETO
-            | PRONOMBRES
-            | SUSTANTIVOS
-            | VERBOPP
-            | VERBOTP
-            | ADJETIVO
-            | ADVERBIOS
-            | PREPOSICIONES
-            | ARTICULOS
-            | DEMOSTRATIVOS
-            | POSESIVOS
-    '''
-    p[0] = "GRAMATICA CORRECTA"
-    print(p[0])
-    palabras_a_traducir = [];
-    palabras_a_traducir.append(p[1]);
-    p[0] = traductor.traducir(palabras_a_traducir)  
 
 
 #-------------------------2------------------------#
@@ -91,6 +69,7 @@ def p_oracion3(p):
     '''
     oracion : SUJETO VERBOTP TEXTO
             | SUJETO VERBOPP TEXTO 
+            | TEXTO TEXTO TEXTO 
     '''
     p[0] = "GRAMATICA CORRECTA"
     print(p[0])
@@ -106,6 +85,7 @@ def p_oracion4(p):
     '''
     oracion : SUJETO VERBOPP TEXTO TEXTO
             | SUJETO VERBOTP TEXTO TEXTO
+            | TEXTO TEXTO TEXTO TEXTO
     '''
     p[0] = "GRAMATICA CORRECTA"
     print(p[0])
@@ -120,6 +100,7 @@ def p_oracion5(p):
     '''
     oracion : SUJETO VERBOPP TEXTO TEXTO TEXTO
             | SUJETO VERBOTP TEXTO TEXTO TEXTO
+            | TEXTO TEXTO TEXTO TEXTO TEXTO
     '''
     p[0] = "GRAMATICA CORRECTA"
     print(p[0])
@@ -135,6 +116,7 @@ def p_oracion6(p):
     '''
     oracion : SUJETO VERBOPP TEXTO TEXTO TEXTO TEXTO
             | SUJETO VERBOTP TEXTO TEXTO TEXTO TEXTO
+            | TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO
     '''
     p[0] = "GRAMATICA CORRECTA"
     print(p[0])
